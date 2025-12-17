@@ -1,0 +1,201 @@
+/* --- Variables & Reset --- */
+:root {
+  --card-bg: #ffffff;
+  --text-main: #1a1a1a;
+  --text-muted: #666666;
+  --accent-color: #971431;
+  --accent-hover: #7e182d;
+  --github-color: #57595c;
+  --linkedin-color: #0077b5;
+  --border-radius: 12px;
+  --font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --first-wave: #6d1317;
+  --second-wave: #7e182d;
+  --third-wave: #971431;
+  --bg-color: #470e19;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  background-image: url("assets/background/Wave.svg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--text-main);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* --- Conteneur Principal --- */
+.container {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  background-color: var(--card-bg);
+  padding: 40px 24px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Header & Profil --- */
+.profile-header {
+  margin-bottom: 32px;
+}
+
+.profile-image {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  display: block;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.bio {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* --- Liens & Boutons --- */
+.link-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  padding: 14px 20px;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.social-row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 15px;
+}
+
+.social-row a {
+  flex: 1;
+}
+
+.lien-principal-github {
+  background-color: var(--github-color);
+  color: white;
+}
+
+.lien-linkedin {
+  background-color: var(--linkedin-color);
+  color: white;
+}
+
+.lien-secondaire {
+  background-color: white;
+  border: 2px solid #e1e4e8;
+  color: var(--text-main);
+}
+
+.lien-secondaire:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.lien-cv {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.lien-secondaire,
+.lien-cv {
+  width: 100%;
+}
+
+.lien-contact {
+  border: none;
+  background: none;
+  padding: 0;
+  font-family: inherit;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-top: 8px;
+
+  transition: color 0.2s;
+}
+
+.lien-contact:hover {
+  color: var(--text-main);
+  text-decoration: underline;
+  transform: none;
+  box-shadow: none;
+}
+
+/* --- Footer --- */
+footer {
+  margin-top: 40px;
+  font-size: 0.75rem;
+  color: #999;
+}
+
+.toast-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+
+  z-index: 1000;
+}
+
+.toast-popup.show {
+  opacity: 1;
+  visibility: visible;
+}

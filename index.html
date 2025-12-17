@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mes Liens | Alexis Guérard</title>
+    <meta
+      name="description"
+      content="Liens professionnels et projets de Alexis Guérard"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="profile-header">
+        <img
+          src="assets/images/photo.jpg"
+          alt="Profil picture of Alex Leqc"
+          class="profile-image"
+        />
+        <h1>Alexis Guérard</h1>
+        <button
+          type="button"
+          class="btn lien-contact"
+          id="button-copy-email"
+          onclick="copyToClipboard(this)"
+        >
+          alexis.guerard@usherbrooke.ca
+        </button>
+        <p class="bio">
+          Étudiant en génie informatique à l'université de Sherbrooke
+        </p>
+      </header>
+
+      <nav class="link-list">
+        <div class="social-row">
+          <a
+            href="https://github.com/AlexLeQc"
+            class="btn lien-principal-github"
+          >
+            <img src="assets/icons/github.svg" alt="" class="btn-icon" />
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/alexis-gu%C3%A9rard-089224212/"
+            class="btn lien-linkedin"
+          >
+            <img src="assets/icons/linkedin.svg" alt="" class="btn-icon" />
+            LinkedIn
+          </a>
+        </div>
+        <a href="#" class="btn lien-secondaire">Projet Web Live</a>
+        <a href="#" class="btn lien-secondaire">Autres Projets Open Source</a>
+        <a href="assets/CV_AlexisGuerard_2026.pdf" class="btn lien-cv" download
+          >Télécharger mon CV</a
+        >
+      </nav>
+
+      <footer>
+        <p>&copy; 2025 Alexis Guérard. Hébergé sur GitHub Pages.</p>
+      </footer>
+    </main>
+    <script src="js/clipboard.js"></script>
+    <div id="copy-toast" class="toast-popup">Email copié !</div>
+  </body>
+</html>
