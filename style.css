@@ -63,9 +63,14 @@ body {
 
 .view-buttons {
   display: flex;
-  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 20px;
-  justify-content: center;
+}
+
+.main-buttons {
+  display: flex;
+  gap: 10px;
 }
 
 .view-btn {
@@ -83,6 +88,28 @@ body {
 }
 
 .view-btn.active {
+  background-color: var(--accent-color);
+  color: white;
+  border-color: var(--accent-color);
+}
+
+.lang-btn {
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  background-color: #e1e4e8;
+  border: 2px solid #e1e4e8;
+  color: var(--text-main);
+  min-width: 40px;
+  font-weight: bold;
+}
+
+.lang-btn:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  background-color: white;
+}
+
+.lang-btn.active {
   background-color: var(--accent-color);
   color: white;
   border-color: var(--accent-color);

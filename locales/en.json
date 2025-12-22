@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects"
+  },
+  "profile": {
+    "title": "Alexis Guérard",
+    "bio": "Computer Engineering student at Université de Sherbrooke",
+    "cv": "Download my CV"
+  },
+  "social": {
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "projects": {
+    "title": "My Projects",
+    "description": "Computer engineering achievements and personal projects",
+    "atlas": "Atlas (Major Design Project)",
+    "keepTheTrackk": "KeepTheTrackk",
+    "miniGolf": "Mini Golf"
+  },
+  "footer": {
+    "copyright": "© 2025 Alexis Guérard."
+  },
+  "toast": {
+    "emailCopied": "Email copied!"
+  },
+  "lang": {
+    "switchTo": "Passer en français"
+  }
+}

@@ -14,8 +14,11 @@
   <body>
     <main class="container">
       <div class="view-buttons">
-        <button class="btn view-btn active" data-view="home">Accueil</button>
-        <button class="btn view-btn" data-view="projects">Projets</button>
+        <div class="main-buttons">
+          <button class="btn view-btn active" data-view="home" data-i18n="nav.home">Accueil</button>
+          <button class="btn view-btn" data-view="projects" data-i18n="nav.projects">Projets</button>
+        </div>
+        <button class="btn lang-btn" id="lang-toggle" data-lang="en" title="Switch to English">EN</button>
       </div>
       <div id="home-view" class="view active">
         <header class="profile-header">
@@ -24,7 +27,7 @@
             alt="Profil picture of Alex Leqc"
             class="profile-image"
           />
-          <h1>Alexis Guérard</h1>
+          <h1 data-i18n="profile.title">Alexis Guérard</h1>
           <button
             type="button"
             class="btn lien-contact"
@@ -33,7 +36,7 @@
           >
             alexis.guerard@usherbrooke.ca
           </button>
-          <p class="bio">
+          <p class="bio" data-i18n="profile.bio">
             Étudiant en génie informatique à l'<a
               href="https://www.usherbrooke.ca/genie"
               target="_blank"
@@ -50,17 +53,17 @@
               class="btn lien-principal-github"
             >
               <img src="assets/icons/github.svg" alt="" class="btn-icon" />
-              GitHub
+              <span data-i18n="social.github">GitHub</span>
             </a>
             <a
               href="https://www.linkedin.com/in/alexis-gu%C3%A9rard-089224212/"
               class="btn lien-linkedin"
             >
               <img src="assets/icons/linkedin.svg" alt="" class="btn-icon" />
-              LinkedIn
+              <span data-i18n="social.linkedin">LinkedIn</span>
             </a>
           </div>
-          <a href="assets/CV_AlexisGuerard_2026.pdf" class="btn lien-cv" download
+          <a href="assets/CV_AlexisGuerard_2026.pdf" class="btn lien-cv" download data-i18n="profile.cv"
             >Télécharger mon CV</a
           >
         </nav>
@@ -72,8 +75,8 @@
             alt="Alexis Guérard"
             class="profile-image"
           />
-          <h1>Mes Projets</h1>
-          <p class="bio">
+          <h1 data-i18n="projects.title">Mes Projets</h1>
+          <p class="bio" data-i18n="projects.description">
             Réalisations en génie informatique et projets personnels
           </p>
         </header>
@@ -83,35 +86,39 @@
             href="https://github.com/AtlasPMC68/Atlas"
             class="btn lien-secondaire"
             target="_blank"
+            data-i18n="projects.atlas"
           >
             Atlas (Projet majeur de conception)
           </a>
-  
+
           <a
             href="https://keepthetrackk.web.app/"
             class="btn lien-secondaire"
             target="_blank"
+            data-i18n="projects.keepTheTrackk"
           >
             KeepTheTrackk
           </a>
-  
+
           <a
             href="https://alexleqc.github.io/mini_g_web/"
             class="btn lien-secondaire"
             target="_blank"
+            data-i18n="projects.miniGolf"
           >
             Mini Golf
           </a>
         </nav>
       </div>
       <footer>
-        <p>&copy; 2025 Alexis Guérard.</p>
+        <p data-i18n="footer.copyright">&copy; 2025 Alexis Guérard.</p>
       </footer>
     </main>
 
 
     <script src="js/clipboard.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/navigation.js"></script>
-    <div id="copy-toast" class="toast-popup">Email copié !</div>
+    <div id="copy-toast" class="toast-popup" data-i18n="toast.emailCopied">Email copié !</div>
   </body>
 </html>

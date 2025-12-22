@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "projects": "Projets"
+  },
+  "profile": {
+    "title": "Alexis Guérard",
+    "bio": "Étudiant en génie informatique à l'Université de Sherbrooke",
+    "cv": "Télécharger mon CV"
+  },
+  "social": {
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "projects": {
+    "title": "Mes Projets",
+    "description": "Réalisations en génie informatique et projets personnels",
+    "atlas": "Atlas (Projet majeur de conception)",
+    "keepTheTrackk": "KeepTheTrackk",
+    "miniGolf": "Mini Golf"
+  },
+  "footer": {
+    "copyright": "© 2025 Alexis Guérard."
+  },
+  "toast": {
+    "emailCopied": "Email copié !"
+  },
+  "lang": {
+    "switchTo": "Switch to English"
+  }
+}
