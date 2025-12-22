@@ -26,20 +26,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  function triggerInitialAnimation() {
+    setTimeout(() => {
+      aboutSection.classList.add('visible');
+    }, 500);
+  }
+
   function handleScroll() {
     const scrollPosition = window.scrollY;
     const windowHeight = window.innerHeight;
-    
-    if (scrollPosition > windowHeight * 0.25) {
+
+    if (scrollPosition > windowHeight * 0.20) {
       aboutSection.classList.add('visible');
-    } else {
-      aboutSection.classList.remove('visible');
     }
   }
-  
+
   window.addEventListener('scroll', handleScroll);
 
-  handleScroll();
+  triggerInitialAnimation();
 
   const aboutTabButtons = document.querySelectorAll('.about-tab-btn');
   const aboutContent = document.getElementById('about-content');
