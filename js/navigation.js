@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const viewButtons = document.querySelectorAll('.view-btn, [data-view]');
   const views = document.querySelectorAll('.view');
   const langToggle = document.getElementById('lang-toggle');
+  const aboutSection = document.getElementById('about-section');
 
   langToggle.addEventListener('click', function() {
     const newLang = this.getAttribute('data-lang');
@@ -22,6 +23,43 @@ document.addEventListener('DOMContentLoaded', function() {
       });
 
       document.getElementById(targetView + '-view').classList.add('active');
+    });
+  });
+
+  function handleScroll() {
+    const scrollPosition = window.scrollY;
+    const windowHeight = window.innerHeight;
+    
+    if (scrollPosition > windowHeight * 0.25) {
+      aboutSection.classList.add('visible');
+    } else {
+      aboutSection.classList.remove('visible');
+    }
+  }
+  
+  window.addEventListener('scroll', handleScroll);
+
+  handleScroll();
+
+  const aboutTabButtons = document.querySelectorAll('.about-tab-btn');
+  const aboutContent = document.getElementById('about-content');
+  const experienceContent = document.getElementById('experience-content');
+
+  aboutTabButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const tab = this.getAttribute('data-tab');
+
+      aboutTabButtons.forEach(btn => btn.classList.remove('active'));
+
+      this.classList.add('active');
+
+      if (tab === 'about') {
+        aboutContent.style.display = 'block';
+        experienceContent.style.display = 'none';
+      } else if (tab === 'experience') {
+        aboutContent.style.display = 'none';
+        experienceContent.style.display = 'block';
+      }
     });
   });
 });

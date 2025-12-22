@@ -27,5 +27,36 @@
   },
   "lang": {
     "switchTo": "Passer en français"
+  },
+  "about": {
+    "title": "About Me",
+    "tab": "About",
+    "experienceTab": "Experience",
+    "experienceTitle": "Professional Experience",
+    "description": "Passionate about computer science and technology, I am a computer engineering student at Université de Sherbrooke. My journey has allowed me to develop strong skills in programming, algorithm design and web development.",
+    "interests": "Interested in web development, distributed architectures, and artificial intelligence, I enjoy taking on technical challenges and creating innovative solutions.",
+    "experience": "During my studies and my internships, I have had the opportunity to work on various projects, from web application development to embedded system design, including participation in programming competitions.",
+    "skills": {
+      "tech": "Technologies",
+      "tools": "Tools"
+    },
+    "exp1": {
+      "title": "Frontend Developer Intern",
+      "company": "Wolters Kluwer, DXG | TAA Canada",
+      "date": "Fall 2025",
+      "description": "• Develop and maintain frontend features using Angular and Rxjs.\n• Collaborate with the backend team for API integration.\n• Implement unit tests executed with Wallaby.js.\n• Work in a development environment in VS Code, with GitHub Copilot integration."
+    },
+    "exp2": {
+      "title": "Full-Stack Developer Intern",
+      "company": "Boréalis, Product Development Team",
+      "date": "Winter 2025",
+      "description": "• Develop and maintain a web application in JavaScript/TypeScript and Node.js in a Docker environment.\n• Implement automated tests with Cypress.\n• Migrate and update a MongoDB database with management of Mongoose breaking changes."
+    },
+    "exp3": {
+      "title": "Analyst/Developer Intern",
+      "company": "City of Sherbrooke, Information Technology Services",
+      "date": "Fall 2023 / Summer 2024",
+      "description": "• Analyze and implement projects in the Maximo application.\n• Evaluate and implement changes to improve or fix functionalities.\n• Collect and analyze requirements to design software solutions.\n• Design interactive BIRT reports for data analysis and visualization."
+    }
   }
 }

@@ -54,6 +54,8 @@ class I18n {
             'Université de Sherbrooke',
             '<a href="https://www.usherbrooke.ca/genie" target="_blank" rel="noopener noreferrer">Université de Sherbrooke</a>'
           );
+        } else if (element.classList.contains('experience-description')) {
+          element.innerHTML = translation.replace(/\n/g, '<br>');
         } else {
           element.textContent = translation;
         }

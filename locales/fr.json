@@ -27,5 +27,36 @@
   },
   "lang": {
     "switchTo": "Switch to English"
+  },
+  "about": {
+    "title": "À propos de moi",
+    "tab": "À propos",
+    "experienceTab": "Expérience",
+    "experienceTitle": "Expérience professionnelle",
+    "description": "Passionné par l'informatique et les technologies, je suis étudiant en génie informatique à l'Université de Sherbrooke. Mon parcours m'a permis de développer des compétences solides en programmation, algorithmie et conception d'applications Web.",
+    "interests": "Intéressé par le développement web, les architectures distribuées et l'intelligence artificielle, j'aime relever des défis techniques et créer des solutions innovantes.",
+    "experience": "Au cours de mes études et de mes stages, j'ai eu l'opportunité de travailler sur divers projets, allant du développement d'applications web à la conception de systèmes embarqués, en passant par la participation à des compétitions de programmation.",
+    "skills": {
+      "tech": "Technologies",
+      "tools": "Outils"
+    },
+    "exp1": {
+      "title": "Stagiaire Développeur Frontend",
+      "company": "Wolters Kluwer, DXG | TAA Canada",
+      "date": "Automne 2025",
+      "description": "• Développer et maintenir les fonctionnalités frontend en utilisant Angular et Rxjs.\n• Collaborer avec l'équipe backend pour l'intégration des API.\n• Implémenter des tests unitaires exécutés avec Wallaby.js.\n• Utiliser un environnement de développement dans VS Code, avec intégration de GitHub Copilot."
+    },
+    "exp2": {
+      "title": "Stagiaire Développeur Full-Stack",
+      "company": "Boréalis, Équipe de développement de produit",
+      "date": "Hiver 2025",
+      "description": "• Développer et maintenir une application web en JavaScript/TypeScript et Node.js dans un environnement Docker.\n• Réaliser des tests automatisés avec Cypress.\n• Migrer et mettre à jour une base de données MongoDB avec gestion des breaking changes de Mongoose."
+    },
+    "exp3": {
+      "title": "Stagiaire Analyste/Développeur",
+      "company": "Ville de Sherbrooke, Service des technologies de l'information",
+      "date": "Automne 2023 / Été 2024",
+      "description": "• Analyser et réaliser des projets dans l'application Maximo.\n• Évaluer et implémenter les changements pour améliorer ou corriger les fonctionnalités.\n• Recueillir et analyser les besoins pour concevoir des solutions logicielles.\n• Concevoir des rapports interactifs BIRT pour l'analyse et la visualisation des données."
+    }
   }
 }
