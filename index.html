@@ -13,59 +13,105 @@
   </head>
   <body>
     <main class="container">
-      <header class="profile-header">
-        <img
-          src="assets/images/photo.jpg"
-          alt="Profil picture of Alex Leqc"
-          class="profile-image"
-        />
-        <h1>Alexis Guérard</h1>
-        <button
-          type="button"
-          class="btn lien-contact"
-          id="button-copy-email"
-          onclick="copyToClipboard(this)"
-        >
-          alexis.guerard@usherbrooke.ca
-        </button>
-        <p class="bio">
-          Étudiant en génie informatique à l'<a
-            href="https://www.usherbrooke.ca/genie"
+      <div class="view-buttons">
+        <button class="btn view-btn active" data-view="home">Accueil</button>
+        <button class="btn view-btn" data-view="projects">Projets</button>
+      </div>
+      <div id="home-view" class="view active">
+        <header class="profile-header">
+          <img
+            src="assets/images/photo.jpg"
+            alt="Profil picture of Alex Leqc"
+            class="profile-image"
+          />
+          <h1>Alexis Guérard</h1>
+          <button
+            type="button"
+            class="btn lien-contact"
+            id="button-copy-email"
+            onclick="copyToClipboard(this)"
+          >
+            alexis.guerard@usherbrooke.ca
+          </button>
+          <p class="bio">
+            Étudiant en génie informatique à l'<a
+              href="https://www.usherbrooke.ca/genie"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Université de Sherbrooke</a
+            >
+          </p>
+        </header>
+
+        <nav class="link-list">
+          <div class="social-row">
+            <a
+              href="https://github.com/AlexLeQc"
+              class="btn lien-principal-github"
+            >
+              <img src="assets/icons/github.svg" alt="" class="btn-icon" />
+              GitHub
+            </a>
+            <a
+              href="https://www.linkedin.com/in/alexis-gu%C3%A9rard-089224212/"
+              class="btn lien-linkedin"
+            >
+              <img src="assets/icons/linkedin.svg" alt="" class="btn-icon" />
+              LinkedIn
+            </a>
+          </div>
+          <a href="assets/CV_AlexisGuerard_2026.pdf" class="btn lien-cv" download
+            >Télécharger mon CV</a
+          >
+        </nav>
+      </div>
+      <div id="projects-view" class="view">
+        <header class="profile-header">
+          <img
+            src="assets/images/photo.jpg"
+            alt="Alexis Guérard"
+            class="profile-image"
+          />
+          <h1>Mes Projets</h1>
+          <p class="bio">
+            Réalisations en génie informatique et projets personnels
+          </p>
+        </header>
+  
+        <nav class="link-list">
+          <a
+            href="https://github.com/AtlasPMC68/Atlas"
+            class="btn lien-secondaire"
             target="_blank"
-            rel="noopener noreferrer"
-            >Université de Sherbrooke</a
           >
-        </p>
-      </header>
-
-      <nav class="link-list">
-        <div class="social-row">
-          <a
-            href="https://github.com/AlexLeQc"
-            class="btn lien-principal-github"
-          >
-            <img src="assets/icons/github.svg" alt="" class="btn-icon" />
-            GitHub
+            Atlas (Projet majeur de conception)
           </a>
+  
           <a
-            href="https://www.linkedin.com/in/alexis-gu%C3%A9rard-089224212/"
-            class="btn lien-linkedin"
+            href="https://keepthetrackk.web.app/"
+            class="btn lien-secondaire"
+            target="_blank"
           >
-            <img src="assets/icons/linkedin.svg" alt="" class="btn-icon" />
-            LinkedIn
+            KeepTheTrackk
           </a>
-        </div>
-        <a href="/pages/projet.html" class="btn lien-secondaire">Projets</a>
-        <a href="assets/CV_AlexisGuerard_2026.pdf" class="btn lien-cv" download
-          >Télécharger mon CV</a
-        >
-      </nav>
-
+  
+          <a
+            href="https://alexleqc.github.io/mini_g_web/"
+            class="btn lien-secondaire"
+            target="_blank"
+          >
+            Mini Golf
+          </a>
+        </nav>
+      </div>
       <footer>
         <p>&copy; 2025 Alexis Guérard.</p>
       </footer>
     </main>
+
+
     <script src="js/clipboard.js"></script>
+    <script src="js/navigation.js"></script>
     <div id="copy-toast" class="toast-popup">Email copié !</div>
   </body>
 </html>

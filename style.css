@@ -1,18 +1,19 @@
-/* --- Variables & Reset --- */
 :root {
   --card-bg: #ffffff;
   --text-main: #1a1a1a;
   --text-muted: #666666;
-  --accent-color: #971431;
-  --accent-hover: #7e182d;
+  --accent-color: #535353;
+  --accent-hover: #535353;
   --github-color: #57595c;
   --linkedin-color: #0077b5;
   --border-radius: 12px;
   --font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --first-wave: #6d1317;
-  --second-wave: #7e182d;
-  --third-wave: #971431;
-  --bg-color: #470e19;
+  --bg-color: #535353;
+  --fifth-cloud: #5E5E5E;
+  --fourth-cloud: #7C7C7C;
+  --third-cloud: #C3C3C3;
+  --second-cloud: #E1E1E1;
+  --first-cloud: #F5F5F5;
 }
 
 * {
@@ -29,7 +30,7 @@ body {
 body {
   font-family: var(--font-family);
   background-color: var(--bg-color);
-  background-image: url("assets/background/Wave.svg");
+  background-image: url("assets/background/Cloudy.svg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -42,7 +43,6 @@ body {
   padding: 20px;
 }
 
-/* --- Conteneur Principal --- */
 .container {
   width: 100%;
   max-width: 400px;
@@ -53,7 +53,41 @@ body {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
-/* --- Header & Profil --- */
+.view {
+  display: none;
+}
+
+.view.active {
+  display: block;
+}
+
+.view-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.view-btn {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  background-color: white;
+  border: 2px solid #e1e4e8;
+  color: var(--text-main);
+  transition: all 0.2s ease;
+}
+
+.view-btn:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.view-btn.active {
+  background-color: var(--accent-color);
+  color: white;
+  border-color: var(--accent-color);
+}
+
 .profile-header {
   margin-bottom: 32px;
 }
@@ -90,7 +124,6 @@ h1 {
   border-bottom: 1px solid var(--text-main);
 }
 
-/* --- Liens & Boutons --- */
 .link-list {
   display: flex;
   flex-direction: column;
@@ -187,7 +220,6 @@ h1 {
   box-shadow: none;
 }
 
-/* --- Footer --- */
 footer {
   margin-top: 40px;
   font-size: 0.75rem;
@@ -204,6 +236,7 @@ footer {
   padding: 12px 20px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
 
   opacity: 0;
   visibility: hidden;
