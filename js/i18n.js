@@ -1,7 +1,7 @@
 // js/i18n.js
 class I18n {
   constructor() {
-    this.currentLang = 'fr';
+    this.currentLang = "fr";
     this.translations = {};
   }
 
@@ -15,8 +15,8 @@ class I18n {
   }
 
   async init() {
-    await this.loadLanguage('fr');
-    await this.loadLanguage('en');
+    await this.loadLanguage("fr");
+    await this.loadLanguage("en");
     this.applyTranslations();
   }
 
@@ -25,14 +25,19 @@ class I18n {
     document.documentElement.lang = lang;
     this.applyTranslations();
 
-    const langToggle = document.getElementById('lang-toggle');
-    langToggle.textContent = lang === 'fr' ? 'EN' : 'FR';
-    langToggle.setAttribute('data-lang', lang === 'fr' ? 'en' : 'fr');
-    langToggle.title = this.t('lang.switchTo');
+    const langToggle = document.getElementById("lang-toggle");
+    langToggle.textContent = lang === "fr" ? "EN" : "FR";
+    langToggle.setAttribute("data-lang", lang === "fr" ? "en" : "fr");
+    langToggle.title = this.t("lang.switchTo");
+    const cvBtn = document.querySelector(".lien-cv");
+    if (cvBtn) {
+      const newHref = cvBtn.getAttribute(`data-cv-${this.currentLang}`);
+      if (newHref) cvBtn.setAttribute("href", newHref);
+    }
   }
 
   t(key) {
-    const keys = key.split('.');
+    const keys = key.split(".");
     let value = this.translations[this.currentLang];
 
     for (const k of keys) {
@@ -43,19 +48,19 @@ class I18n {
   }
 
   applyTranslations() {
-    const elements = document.querySelectorAll('[data-i18n]');
-    elements.forEach(element => {
-      const key = element.getAttribute('data-i18n');
+    const elements = document.querySelectorAll("[data-i18n]");
+    elements.forEach((element) => {
+      const key = element.getAttribute("data-i18n");
       const translation = this.t(key);
 
       if (translation) {
-        if (element.classList.contains('bio')) {
+        if (element.classList.contains("bio")) {
           element.innerHTML = translation.replace(
-            'Université de Sherbrooke',
-            '<a href="https://www.usherbrooke.ca/genie" target="_blank" rel="noopener noreferrer">Université de Sherbrooke</a>'
+            "Université de Sherbrooke",
+            '<a href="https://www.usherbrooke.ca/genie" target="_blank" rel="noopener noreferrer">Université de Sherbrooke</a>',
           );
-        } else if (element.classList.contains('experience-description')) {
-          element.innerHTML = translation.replace(/\n/g, '<br>');
+        } else if (element.classList.contains("experience-description")) {
+          element.innerHTML = translation.replace(/\n/g, "<br>");
         } else {
           element.textContent = translation;
         }
@@ -65,4 +70,4 @@ class I18n {
 }
 
 const i18n = new I18n();
-document.addEventListener('DOMContentLoaded', () => i18n.init());
+document.addEventListener("DOMContentLoaded", () => i18n.init());
