@@ -25,7 +25,7 @@ const I18n = (() => {
 
   async function load(lang) {
     if (translations[lang]) return translations[lang];
-    const res = await fetch(`${base}locales/${lang}.json`);
+    const res = await fetch(`${base}locales/${lang}.json`, { cache: "no-cache" });
     translations[lang] = await res.json();
     return translations[lang];
   }
