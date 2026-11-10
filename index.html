@@ -3,344 +3,213 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alexis Guérard</title>
-    <meta
-      name="description"
-      content="Liens professionnels et projets de Alexis Guérard"
-    />
+    <title data-i18n="meta.title">Alexis Guérard</title>
+    <meta name="description" content="Portfolio d'Alexis Guérard, finissant en génie informatique à l'Université de Sherbrooke : analyse d'affaires, développement web et coordination d'équipe." data-i18n-attr="content:meta.desc" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Alexis Guérard" />
+    <meta property="og:description" content="Portfolio d'Alexis Guérard, finissant en génie informatique à l'Université de Sherbrooke : analyse d'affaires, développement web et coordination d'équipe." />
+    <meta property="og:url" content="https://alexleqc.github.io/" />
+    <meta property="og:image" content="https://alexleqc.github.io/assets/images/photo.jpg" />
     <link rel="icon" type="image/svg+xml" href="assets/icons/cloud.svg" />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <div class="fixed-bg"></div>
-    <main class="container">
-      <div class="view-buttons">
-        <div class="main-buttons">
-          <button
-            class="btn view-btn active"
-            data-view="home"
-            data-i18n="nav.home"
-          >
-            Accueil
-          </button>
-          <button
-            class="btn view-btn"
-            data-view="projects"
-            data-i18n="nav.projects"
-          >
-            Projets
-          </button>
-        </div>
-        <button
-          class="btn lang-btn"
-          id="lang-toggle"
-          data-lang="en"
-          title="Switch to English"
-        >
-          EN
+  <body data-base="">
+    <div class="fixed-bg" aria-hidden="true"></div>
+    <div class="page">
+      <header class="site-header">
+        <a class="brand" href="#top">Alexis Guérard</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-i18n-attr="aria-label:nav.menu" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
         </button>
-      </div>
-      <div id="home-view" class="view active">
-        <header class="profile-header">
-          <img
-            src="assets/images/photo.jpg"
-            alt="Profil picture of Alex Leqc"
-            class="profile-image"
-          />
-          <h1 data-i18n="profile.title">Alexis Guérard</h1>
-          <button
-            type="button"
-            class="btn lien-contact"
-            id="button-copy-email"
-            onclick="copyToClipboard(this)"
-          >
-            alexis.guerard@usherbrooke.ca
-          </button>
-          <p class="bio" data-i18n="profile.bio">
-            Étudiant en génie informatique à l'<a
-              href="https://www.usherbrooke.ca/genie"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Université de Sherbrooke</a
-            >
-          </p>
-        </header>
-
-        <nav class="link-list">
-          <div class="social-row">
-            <a
-              href="https://github.com/AlexLeQc"
-              class="btn lien-principal-github"
-            >
-              <img src="assets/icons/github.svg" alt="" class="btn-icon" />
-              <span data-i18n="social.github">GitHub</span>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/alexis-gu%C3%A9rard-089224212/"
-              class="btn lien-linkedin"
-            >
-              <img src="assets/icons/linkedin.svg" alt="" class="btn-icon" />
-              <span data-i18n="social.linkedin">LinkedIn</span>
-            </a>
+        <nav class="site-nav" id="site-nav">
+          <a href="#projets" data-i18n="nav.projects">Projets</a>
+          <a href="#experience" data-i18n="nav.experience">Expérience</a>
+          <a href="#a-propos" data-i18n="nav.about">À propos</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+          <div class="nav-actions">
+            <button class="lang-btn" id="lang-toggle" type="button" data-i18n="lang.label" data-i18n-attr="title:lang.switchTo" title="Switch to English">EN</button>
+            <a class="btn btn-dark btn-sm js-cv" href="assets/CV_AlexisGuerard_2026_FR.pdf" data-cv-fr="assets/CV_AlexisGuerard_2026_FR.pdf" data-cv-en="assets/CV_AlexisGuerard_2026_EN.pdf" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg><span data-i18n="nav.cv">CV</span></a>
           </div>
-          <a
-            href="assets/CV_AlexisGuerard_2026_FR.pdf"
-            class="btn lien-cv"
-            download
-            data-i18n="profile.cv"
-            data-cv-fr="assets/CV_AlexisGuerard_2026_FR.pdf"
-            data-cv-en="assets/CV_AlexisGuerard_2026_EN.pdf"
-            >Télécharger mon CV</a
-          >
         </nav>
-      </div>
-      <div id="projects-view" class="view">
-        <header class="profile-header">
-          <img
-            src="assets/images/photo.jpg"
-            alt="Alexis Guérard"
-            class="profile-image"
-          />
-          <h1 data-i18n="projects.title">Mes Projets</h1>
-          <p class="bio" data-i18n="projects.description">
-            Réalisations en génie informatique et projets personnels
-          </p>
-        </header>
+      </header>
+      <main id="top">
+        <section class="hero">
+          <div class="hero-text">
+            <p class="badge"><span class="dot" aria-hidden="true"></span><span data-i18n="hero.badge">Ouvert aux opportunités</span></p>
+            <h1 data-i18n="hero.title">Bonjour! Je suis Alexis, finissant en génie informatique.</h1>
+            <p data-i18n-html="hero.p1">J'aime transformer les besoins des gens en solutions web concrètes. Au fil de cinq stages, je suis passé du développement frontend et full-stack à l'<strong>analyse d'affaires</strong> : rédiger des récits utilisateurs, animer des ateliers et faire le pont entre les utilisateurs et les développeurs.</p>
+            <p data-i18n="hero.p2">Dans mon projet de fin d'études, Atlas, j'ai coordonné une équipe de huit tout en développant l'extraction de formes et le déploiement de l'application.</p>
+            <p data-i18n-html="hero.p3">Je termine mon baccalauréat à l'Université de Sherbrooke en décembre 2026 et je cherche un premier poste d'<strong>analyste</strong> ou de <strong>développeur</strong>.</p>
+            <div class="btn-row">
+              <a class="btn btn-dark" href="https://www.linkedin.com/in/alexis-gu%C3%A9rard-089224212/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>LinkedIn</a>
+              <a class="btn btn-outline" href="https://github.com/AlexLeQc" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>GitHub</a>
+              <a class="btn btn-outline js-cv" href="assets/CV_AlexisGuerard_2026_FR.pdf" data-cv-fr="assets/CV_AlexisGuerard_2026_FR.pdf" data-cv-en="assets/CV_AlexisGuerard_2026_EN.pdf" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg><span data-i18n="hero.cv">Télécharger mon CV</span></a>
+            </div>
+          </div>
+          <div class="hero-photo">
+            <img src="assets/images/photo.webp" width="600" height="600" alt="Photo d'Alexis Guérard" data-i18n-attr="alt:hero.photoAlt" />
+          </div>
+        </section>
 
-        <nav class="link-list">
-          <a
-            href="https://github.com/AtlasPMC68/Atlas"
-            class="btn lien-secondaire"
-            target="_blank"
-            data-i18n="projects.atlas"
-          >
-            Atlas (Projet majeur de conception)
-          </a>
+        <section class="section" id="projets">
+          <div class="section-head">
+            <h2 data-i18n="projects.title">Projets</h2>
+            <p data-i18n="projects.subtitle">Quelques réalisations, scolaires et personnelles.</p>
+          </div>
 
-          <a
-            href="https://alexleqc.github.io/mini_g_web/"
-            class="btn lien-secondaire"
-            target="_blank"
-            data-i18n="projects.miniGolf"
-          >
-            Mini Golf
-          </a>
+          <article class="card card-feature">
+            <a class="card-media" href="projets/atlas.html">
+              <img src="assets/projects/atlas-invasion.webp" width="1600" height="884" loading="lazy" alt="Interface d'Atlas : une carte de 1775 numérisée à côté de l'originale" data-i18n-attr="alt:projects.atlas.imgAlt" />
+            </a>
+            <div class="card-body">
+              <p class="eyebrow" data-i18n="projects.atlas.tag">Projet de fin d'études</p>
+              <h3>Atlas</h3>
+              <p data-i18n="projects.atlas.desc">Plateforme web libre qui aide les enseignants d'histoire et de géographie à numériser des cartes anciennes : on importe une image, Atlas en extrait le texte, les couleurs et les formes, puis les replace sur une carte du monde avec une ligne du temps.</p>
+              <p data-i18n-html="projects.atlas.role"><strong>Mon rôle :</strong> coordination de l'équipe, extraction de formes et déploiement.</p>
+              <ul class="tags"><li>Vue 3</li><li>Python</li><li>FastAPI</li><li>OpenCV</li><li>Celery</li><li>PostGIS</li><li>Docker</li><li>Jira</li></ul>
+              <div class="btn-row">
+                <a class="btn btn-dark" href="projets/atlas.html"><span data-i18n="projects.case">Lire l'étude de cas</span><svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+                <a class="btn btn-outline" href="https://github.com/AtlasPMC68/Atlas" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg><span data-i18n="projects.code">Code source</span></a>
+              </div>
+            </div>
+          </article>
 
-          <a
-            href="https://integration-run.vercel.app"
-            class="btn lien-secondaire"
-            target="_blank"
-            data-i18n="projects.integrationRun"
-          >
-            Integration Run
-          </a>
+          <div class="card-grid">
+            <article class="card">
+              <a class="card-media" href="https://integration-run.vercel.app" target="_blank" rel="noopener">
+                <img src="assets/projects/integration-run.webp" width="1600" height="884" loading="lazy" alt="Écran d'accueil du jeu Integration Run" data-i18n-attr="alt:projects.ir.imgAlt" />
+              </a>
+              <div class="card-body">
+                <p class="eyebrow" data-i18n="projects.ir.tag">Projet personnel · 2026</p>
+                <h3>Integration Run</h3>
+                <p data-i18n="projects.ir.desc">Jeu de course mobile à trois voies créé pour la semaine d'intégration des nouveaux étudiants en génie, avec un classement en ligne. Développé rapidement en collaboration avec des agents de code IA.</p>
+                <ul class="tags"><li>Vite</li><li>JavaScript</li><li>Canvas</li><li>Supabase</li></ul>
+                <div class="btn-row">
+                  <a class="btn btn-dark" href="https://integration-run.vercel.app" target="_blank" rel="noopener"><span data-i18n="projects.play">Jouer</span><svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6m0-6L10 14M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+                </div>
+              </div>
+            </article>
 
-          <a
-            href="https://story-telling-nine.vercel.app/"
-            class="btn lien-secondaire"
-            target="_blank"
-            data-i18n="projects.storyTelling"
-          >
-            Story Telling
-          </a>
+            <article class="card">
+              <a class="card-media" href="https://alexleqc.github.io/mini_g_web/" target="_blank" rel="noopener">
+                <img src="assets/projects/mini-golf.webp" width="1600" height="884" loading="lazy" alt="Écran d'accueil du jeu Mini-G" data-i18n-attr="alt:projects.mg.imgAlt" />
+              </a>
+              <div class="card-body">
+                <p class="eyebrow" data-i18n="projects.mg.tag">Projet scolaire · 2e session</p>
+                <h3>Mini Golf</h3>
+                <p data-i18n="projects.mg.desc">Mon projet de deuxième session, réinventé en jeu web jouable directement dans le navigateur.</p>
+                <ul class="tags"><li>JavaScript</li><li>GitHub Pages</li></ul>
+                <div class="btn-row">
+                  <a class="btn btn-dark" href="https://alexleqc.github.io/mini_g_web/" target="_blank" rel="noopener"><span data-i18n="projects.play">Jouer</span><svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6m0-6L10 14M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+                </div>
+              </div>
+            </article>
+          </div>
 
-          <a
-            href="https://keepthetrackk.web.app/"
-            class="btn lien-secondaire"
-            target="_blank"
-            data-i18n="projects.keepTheTrackk"
-          >
-            KeepTheTrackk
-          </a>
-        </nav>
-      </div>
-      <footer>
-        <p data-i18n="footer.copyright">&copy; 2026 Alexis Guérard.</p>
-      </footer>
-    </main>
+          <h3 class="subhead" data-i18n="projects.others">Autres projets</h3>
+          <ul class="mini-list">
+            <li>
+              <a href="https://story-telling-nine.vercel.app/" target="_blank" rel="noopener">
+                <span class="mini-title">Story Telling <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6m0-6L10 14M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></span>
+                <span class="mini-desc" data-i18n="projects.story.desc">Petit site pour créer et raconter des histoires.</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://keepthetrackk.web.app/" target="_blank" rel="noopener">
+                <span class="mini-title">KeepTheTrackk <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6m0-6L10 14M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></span>
+                <span class="mini-desc" data-i18n="projects.keep.desc">Projet personnel d'exploration, hébergé sur Firebase.</span>
+              </a>
+            </li>
+          </ul>
+        </section>
 
-    <section class="about-section" id="about-section">
-      <div class="about-container">
-        <div class="about-tabs">
-          <button
-            class="about-tab-btn active"
-            data-tab="about"
-            data-i18n="about.tab"
-          >
-            À propos
-          </button>
-          <button
-            class="about-tab-btn"
-            data-tab="experience"
-            data-i18n="about.experienceTab"
-          >
-            Expérience
-          </button>
-        </div>
+        <section class="section" id="experience">
+          <div class="section-head">
+            <h2 data-i18n="exp.title">Expérience</h2>
+            <p data-i18n="exp.subtitle">Cinq stages coopératifs, du code à l'analyse.</p>
+          </div>
+          <ol class="timeline">
+            <li class="exp-item">
+              <div class="exp-head">
+                <h3 data-i18n="exp.ba.role">Stagiaire analyste d'affaires</h3>
+                <span class="exp-date" data-i18n="exp.ba.date">Été 2026</span>
+              </div>
+              <p class="exp-company">Wolters Kluwer, DXG | TAA Canada</p>
+              <ul class="exp-desc" data-i18n-html="exp.ba.desc"><li>Analyse des besoins d'une application web de préparation de déclarations fiscales pour cabinets comptables.</li><li>Traduction d'exigences réglementaires en récits utilisateurs et critères d'acceptation.</li><li>Ateliers d'idéation avec les équipes d'architecture et d'UX; démonstrations de sprint et de PI.</li></ul>
+              <ul class="tags tags-sm"><li>Jira</li><li>Agile / SAFe</li><li>UAT</li></ul>
+            </li>
+            <li class="exp-item">
+              <div class="exp-head">
+                <h3 data-i18n="exp.fe.role">Stagiaire développeur frontend</h3>
+                <span class="exp-date" data-i18n="exp.fe.date">Automne 2025</span>
+              </div>
+              <p class="exp-company">Wolters Kluwer, DXG | TAA Canada</p>
+              <ul class="exp-desc" data-i18n-html="exp.fe.desc"><li>Développement de fonctionnalités avec Angular et RxJS, en lien avec l'équipe backend pour l'intégration des API.</li><li>Tests unitaires avec Wallaby.js; GitHub Copilot intégré au quotidien.</li></ul>
+              <ul class="tags tags-sm"><li>Angular</li><li>RxJS</li><li>Wallaby.js</li></ul>
+            </li>
+            <li class="exp-item">
+              <div class="exp-head">
+                <h3 data-i18n="exp.bo.role">Stagiaire développeur full-stack</h3>
+                <span class="exp-date" data-i18n="exp.bo.date">Hiver 2025</span>
+              </div>
+              <p class="exp-company"><span data-i18n="exp.bo.company">Boréalis, équipe de développement de produit</span></p>
+              <ul class="exp-desc" data-i18n-html="exp.bo.desc"><li>Application web en TypeScript et Node.js dans un environnement Docker, avec tests automatisés Cypress.</li><li>Migration d'une base de données MongoDB et gestion des changements incompatibles de Mongoose.</li></ul>
+              <ul class="tags tags-sm"><li>TypeScript</li><li>Node.js</li><li>MongoDB</li><li>Cypress</li></ul>
+            </li>
+            <li class="exp-item">
+              <div class="exp-head">
+                <h3 data-i18n="exp.vs.role">Stagiaire analyste-développeur</h3>
+                <span class="exp-date" data-i18n="exp.vs.date">Automne 2023 et été 2024</span>
+              </div>
+              <p class="exp-company"><span data-i18n="exp.vs.company">Ville de Sherbrooke, Service des technologies de l'information</span></p>
+              <ul class="exp-desc" data-i18n-html="exp.vs.desc"><li>Recueil des besoins des utilisateurs et configuration de solutions dans le progiciel IBM Maximo.</li><li>Requêtes SQL et rapports interactifs BIRT pour le suivi des opérations municipales.</li></ul>
+              <ul class="tags tags-sm"><li>IBM Maximo</li><li>SQL</li><li>BIRT</li></ul>
+            </li>
+          </ol>
+        </section>
 
-        <div class="about-content-wrapper">
-          <div class="about-content" id="about-content">
-            <h2 data-i18n="about.title">À propos de moi</h2>
+        <section class="section" id="a-propos">
+          <div class="section-head">
+            <h2 data-i18n="about.title">À propos</h2>
+          </div>
+          <div class="about-grid">
             <div class="about-text">
-              <p data-i18n="about.description">
-                Passionné par l'informatique et les technologies, je suis
-                étudiant en génie informatique à l'Université de Sherbrooke. Mon
-                parcours m'a permis de développer des compétences solides en
-                programmation, algorithmie et conception de systèmes.
-              </p>
-              <p data-i18n="about.interests">
-                Intéressé par le développement web, les architectures
-                distribuées et l'intelligence artificielle, j'aime relever des
-                défis techniques et créer des solutions innovantes.
-              </p>
-              <p data-i18n="about.experience">
-                Au cours de mes études, j'ai eu l'opportunité de travailler sur
-                divers projets, allant du développement d'applications web à la
-                conception de systèmes embarqués, en passant par la
-                participation à des compétitions de programmation.
-              </p>
+              <p data-i18n-html="about.p1">Je termine mon baccalauréat en génie informatique (régime coopératif) à l'Université de Sherbrooke, avec une moyenne de <strong>4,00 sur 4,30</strong> et une spécialisation en sécurité informatique.</p>
+              <p data-i18n="about.p2">Ce qui me motive, c'est de comprendre un besoin réel et de livrer quelque chose qui simplifie vraiment la vie des utilisateurs. Je m'intéresse particulièrement à l'intégration de l'IA dans les produits et les façons de travailler; je l'utilise moi-même tous les jours.</p>
+              <p data-i18n="about.p3">Hors du clavier : escalade, randonnée, planche à neige et plein air en général. J'ai aussi été président du comité de ma promotion en génie.</p>
             </div>
-
-            <div class="skills-grid">
-              <div class="skill-category">
-                <h3 data-i18n="about.skills.tech">Technologies</h3>
-                <div class="skill-tags">
-                  <span class="skill-tag">JavaScript</span>
-                  <span class="skill-tag">TypeScript</span>
-                  <span class="skill-tag">Python</span>
-                  <span class="skill-tag">React</span>
-                  <span class="skill-tag">Node.js</span>
-                  <span class="skill-tag">C++</span>
-                  <span class="skill-tag">SQL</span>
-                  <span class="skill-tag">HTML</span>
-                  <span class="skill-tag">CSS</span>
-                  <span class="skill-tag">Java</span>
-                  <span class="skill-tag">Angular</span>
-                  <span class="skill-tag">Vite/vue</span>
-                </div>
-              </div>
-
-              <div class="skill-category">
-                <h3 data-i18n="about.skills.tools">Outils</h3>
-                <div class="skill-tags">
-                  <span class="skill-tag">Git</span>
-                  <span class="skill-tag">Docker</span>
-                  <span class="skill-tag">Linux</span>
-                  <span class="skill-tag">VS Code</span>
-                  <span class="skill-tag">Cursor</span>
-                  <span class="skill-tag">Jira</span>
-                  <span class="skill-tag">Confluence</span>
-                  <span class="skill-tag">Firebase</span>
-                  <span class="skill-tag">MongoDB</span>
-                  <span class="skill-tag">PostgreSQL</span>
-                  <span class="skill-tag">Vercel</span>
-                  <span class="skill-tag">Render</span>
-                </div>
-              </div>
+            <div class="skills">
+              <div><h3 data-i18n="about.skills.dev">Développement</h3><ul class="tags"><li>TypeScript / JavaScript</li><li>Python</li><li>Java</li><li>C++</li><li>Angular</li><li>Vue.js</li><li>React</li><li>Node.js</li></ul></div>
+              <div><h3 data-i18n="about.skills.data">Données</h3><ul class="tags"><li>SQL</li><li>PostgreSQL</li><li>MongoDB</li><li>BIRT</li><li>OpenCV</li></ul></div>
+              <div><h3 data-i18n="about.skills.methods">Outils et méthodes</h3><ul class="tags"><li>Agile / Scrum</li><li>SAFe</li><li>Jira</li><li>Confluence</li><li>Docker</li><li>Git</li><li>IBM Maximo</li></ul></div>
+              <div><h3 data-i18n="about.skills.ai">IA</h3><ul class="tags"><li>GitHub Copilot</li><li>Cursor</li><li>Claude</li><li>Antigravity</li></ul></div>
             </div>
           </div>
+        </section>
 
-          <div
-            class="about-content"
-            id="experience-content"
-            style="display: none"
-          >
-            <h2 data-i18n="about.experienceTitle">Expérience de travail</h2>
-            <div class="experience-list">
-              <div class="experience-item">
-                <div class="experience-header">
-                  <h3 data-i18n="about.exp4.title">Titre du poste</h3>
-                  <span class="experience-date" data-i18n="about.exp4.date"
-                    >Été 2026</span
-                  >
-                </div>
-                <p class="experience-company" data-i18n="about.exp4.company">
-                  Nom de l'entreprise
-                </p>
-                <p
-                  class="experience-description"
-                  data-i18n="about.exp4.description"
-                >
-                  Description de vos responsabilités et réalisations dans ce
-                  poste.
-                </p>
-              </div>
-
-              <div class="experience-item">
-                <div class="experience-header">
-                  <h3 data-i18n="about.exp1.title">Titre du poste</h3>
-                  <span class="experience-date" data-i18n="about.exp1.date"
-                    >2023 - Présent</span
-                  >
-                </div>
-                <p class="experience-company" data-i18n="about.exp1.company">
-                  Nom de l'entreprise
-                </p>
-                <p
-                  class="experience-description"
-                  data-i18n="about.exp1.description"
-                >
-                  Description de vos responsabilités et réalisations dans ce
-                  poste.
-                </p>
-              </div>
-
-              <div class="experience-item">
-                <div class="experience-header">
-                  <h3 data-i18n="about.exp2.title">Titre du poste</h3>
-                  <span class="experience-date" data-i18n="about.exp2.date"
-                    >2022 - 2023</span
-                  >
-                </div>
-                <p class="experience-company" data-i18n="about.exp2.company">
-                  Nom de l'entreprise
-                </p>
-                <p
-                  class="experience-description"
-                  data-i18n="about.exp2.description"
-                >
-                  Description de vos responsabilités et réalisations dans ce
-                  poste.
-                </p>
-              </div>
-
-              <div class="experience-item">
-                <div class="experience-header">
-                  <h3 data-i18n="about.exp3.title">Titre du poste</h3>
-                  <span class="experience-date" data-i18n="about.exp3.date"
-                    >2021 - 2022</span
-                  >
-                </div>
-                <p class="experience-company" data-i18n="about.exp3.company">
-                  Nom de l'entreprise
-                </p>
-                <p
-                  class="experience-description"
-                  data-i18n="about.exp3.description"
-                >
-                  Description de vos responsabilités et réalisations dans ce
-                  poste.
-                </p>
-              </div>
-            </div>
+        <section class="section contact" id="contact">
+          <h2 data-i18n="contact.title">Contact</h2>
+          <p data-i18n="contact.text">Un poste, un projet ou simplement une question? Écris-moi, je réponds rapidement.</p>
+          <div class="contact-email">
+            <a class="email-link" href="mailto:alexis.guerard@hotmail.com">alexis.guerard@hotmail.com</a>
+            <button class="btn btn-outline btn-sm" type="button" id="copy-email" data-email="alexis.guerard@hotmail.com"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 9h10v10H9zM5 15V5h10"/></svg><span data-i18n="contact.copy">Copier le courriel</span></button>
           </div>
+          <div class="btn-row btn-row-center">
+            <a class="btn btn-dark" href="https://www.linkedin.com/in/alexis-gu%C3%A9rard-089224212/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>LinkedIn</a>
+            <a class="btn btn-outline" href="https://github.com/AlexLeQc" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>GitHub</a>
+          </div>
+        </section>
+      </main>
+      <footer class="site-footer">
+        <p data-i18n="footer.text">© 2026 Alexis Guérard</p>
+        <div class="footer-links">
+          <a href="https://github.com/AlexLeQc" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg></a>
+          <a href="https://www.linkedin.com/in/alexis-gu%C3%A9rard-089224212/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg></a>
         </div>
-
-        <div class="about-image">
-          <img
-            src="assets/images/photo.jpg"
-            alt="Alexis Guérard"
-            class="about-photo"
-          />
-        </div>
-      </div>
-    </section>
-
-    <script src="js/clipboard.js"></script>
-    <script src="js/i18n.js"></script>
-    <script src="js/navigation.js"></script>
-    <div id="copy-toast" class="toast-popup" data-i18n="toast.emailCopied">
-      Email copié !
+      </footer>
     </div>
+    <div id="copy-toast" class="toast" role="status" aria-live="polite" data-i18n="toast.copied">Courriel copié!</div>
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

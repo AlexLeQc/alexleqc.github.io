@@ -1,70 +1,191 @@
 {
-  "nav": {
-    "home": "Accueil",
-    "projects": "Projets"
-  },
-  "profile": {
+  "meta": {
     "title": "Alexis Guérard",
-    "bio": "Étudiant en génie informatique à l'Université de Sherbrooke",
-    "cv": "Télécharger mon CV"
+    "desc": "Portfolio d'Alexis Guérard, finissant en génie informatique à l'Université de Sherbrooke : analyse d'affaires, développement web et coordination d'équipe.",
+    "atlasTitle": "Atlas — Étude de cas | Alexis Guérard",
+    "atlasDesc": "Atlas, une plateforme web pour numériser des cartes historiques : coordination d'équipe, extraction de formes et déploiement."
   },
-  "social": {
-    "github": "GitHub",
-    "linkedin": "LinkedIn"
-  },
-  "projects": {
-    "title": "Mes Projets",
-    "description": "Réalisations en génie informatique et projets personnels",
-    "atlas": "Atlas (Projet majeur de conception)",
-    "keepTheTrackk": "KeepTheTrackk",
-    "miniGolf": "Mini Golf",
-    "integrationRun": "Integration Run",
-    "storyTelling": "Story Telling"
-  },
-  "footer": {
-    "copyright": "© 2026 Alexis Guérard."
-  },
-  "toast": {
-    "emailCopied": "Email copié !"
+  "nav": {
+    "projects": "Projets",
+    "experience": "Expérience",
+    "about": "À propos",
+    "contact": "Contact",
+    "cv": "CV",
+    "menu": "Ouvrir le menu"
   },
   "lang": {
-    "switchTo": "Switch to English"
+    "switchTo": "Switch to English",
+    "label": "EN"
+  },
+  "hero": {
+    "title": "Bonjour! Je suis Alexis, finissant en génie informatique.",
+    "p1": "J'aime transformer les besoins des gens en solutions web concrètes. Au fil de cinq stages, je suis passé du développement frontend et full-stack à l'<strong>analyse d'affaires</strong> : rédiger des récits utilisateurs, animer des ateliers et faire le pont entre les utilisateurs et les développeurs.",
+    "p2": "Dans mon projet de fin d'études, Atlas, j'ai coordonné une équipe de huit tout en développant l'extraction de formes et le déploiement de l'application.",
+    "p3": "Je termine mon baccalauréat à l'Université de Sherbrooke en décembre 2026 et je cherche un premier poste d'<strong>analyste</strong> ou de <strong>développeur</strong>.",
+    "badge": "Ouvert aux opportunités",
+    "cv": "Télécharger mon CV",
+    "photoAlt": "Photo d'Alexis Guérard"
+  },
+  "projects": {
+    "title": "Projets",
+    "subtitle": "Quelques réalisations, scolaires et personnelles.",
+    "case": "Lire l'étude de cas",
+    "code": "Code source",
+    "play": "Jouer",
+    "atlas": {
+      "tag": "Projet de fin d'études",
+      "desc": "Plateforme web libre qui aide les enseignants d'histoire et de géographie à numériser des cartes anciennes : on importe une image, Atlas en extrait le texte, les couleurs et les formes, puis les replace sur une carte du monde avec une ligne du temps.",
+      "role": "<strong>Mon rôle :</strong> coordination de l'équipe, extraction de formes et déploiement.",
+      "imgAlt": "Interface d'Atlas : une carte de 1775 numérisée à côté de l'originale"
+    },
+    "ir": {
+      "tag": "Projet personnel · 2026",
+      "desc": "Jeu de course mobile à trois voies créé pour la semaine d'intégration des nouveaux étudiants en génie, avec un classement en ligne. Développé rapidement en collaboration avec des agents de code IA.",
+      "imgAlt": "Écran d'accueil du jeu Integration Run"
+    },
+    "mg": {
+      "tag": "Projet scolaire · 2e session",
+      "imgAlt": "Écran d'accueil du jeu Mini-G",
+      "desc": "Mon projet de deuxième session, réinventé en jeu web jouable directement dans le navigateur."
+    },
+    "others": "Autres projets",
+    "story": {
+      "desc": "Petit site pour créer et raconter des histoires."
+    },
+    "keep": {
+      "desc": "Projet personnel d'exploration, hébergé sur Firebase."
+    }
+  },
+  "exp": {
+    "title": "Expérience",
+    "subtitle": "Cinq stages coopératifs, du code à l'analyse.",
+    "ba": {
+      "role": "Stagiaire analyste d'affaires",
+      "date": "Été 2026",
+      "desc": "<li>Analyse des besoins d'une application web de préparation de déclarations fiscales pour cabinets comptables.</li><li>Traduction d'exigences réglementaires en récits utilisateurs et critères d'acceptation.</li><li>Ateliers d'idéation avec les équipes d'architecture et d'UX; démonstrations de sprint et de PI.</li>"
+    },
+    "fe": {
+      "role": "Stagiaire développeur frontend",
+      "date": "Automne 2025",
+      "desc": "<li>Développement de fonctionnalités avec Angular et RxJS, en lien avec l'équipe backend pour l'intégration des API.</li><li>Tests unitaires avec Wallaby.js; GitHub Copilot intégré au quotidien.</li>"
+    },
+    "bo": {
+      "role": "Stagiaire développeur full-stack",
+      "company": "Boréalis, équipe de développement de produit",
+      "date": "Hiver 2025",
+      "desc": "<li>Application web en TypeScript et Node.js dans un environnement Docker, avec tests automatisés Cypress.</li><li>Migration d'une base de données MongoDB et gestion des changements incompatibles de Mongoose.</li>"
+    },
+    "vs": {
+      "role": "Stagiaire analyste-développeur",
+      "company": "Ville de Sherbrooke, Service des technologies de l'information",
+      "date": "Automne 2023 et été 2024",
+      "desc": "<li>Recueil des besoins des utilisateurs et configuration de solutions dans le progiciel IBM Maximo.</li><li>Requêtes SQL et rapports interactifs BIRT pour le suivi des opérations municipales.</li>"
+    }
   },
   "about": {
-    "title": "À propos de moi",
-    "tab": "À propos",
-    "experienceTab": "Expérience",
-    "experienceTitle": "Expérience professionnelle",
-    "description": "Passionné par l'informatique et les technologies, je suis étudiant en génie informatique à l'Université de Sherbrooke. Mon parcours m'a permis de développer des compétences solides en programmation, algorithmie et conception d'applications Web.",
-    "interests": "Intéressé par le développement web, les architectures distribuées et l'intelligence artificielle, j'aime relever des défis techniques et créer des solutions innovantes.",
-    "experience": "Au cours de mes études et de mes stages, j'ai eu l'opportunité de travailler sur divers projets, allant du développement d'applications web à la conception de systèmes embarqués, en passant par la participation à des compétitions de programmation.",
+    "title": "À propos",
+    "p1": "Je termine mon baccalauréat en génie informatique (régime coopératif) à l'Université de Sherbrooke, avec une moyenne de <strong>4,00 sur 4,30</strong> et une spécialisation en sécurité informatique.",
+    "p2": "Ce qui me motive, c'est de comprendre un besoin réel et de livrer quelque chose qui simplifie vraiment la vie des utilisateurs. Je m'intéresse particulièrement à l'intégration de l'IA dans les produits et les façons de travailler; je l'utilise moi-même tous les jours.",
+    "p3": "Hors du clavier : escalade, randonnée, planche à neige et plein air en général. J'ai aussi été président du comité de ma promotion en génie.",
     "skills": {
-      "tech": "Technologies",
-      "tools": "Outils"
+      "dev": "Développement",
+      "data": "Données",
+      "methods": "Outils et méthodes",
+      "ai": "IA"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "text": "Un poste, un projet ou simplement une question? Écris-moi, je réponds rapidement.",
+    "copy": "Copier le courriel"
+  },
+  "toast": {
+    "copied": "Courriel copié!"
+  },
+  "footer": {
+    "text": "© 2026 Alexis Guérard"
+  },
+  "case": {
+    "back": "Retour aux projets",
+    "eyebrow": "Étude de cas · Projet majeur de conception",
+    "lead": "Une plateforme web libre pour numériser, comparer et partager des cartes historiques en classe.",
+    "meta": {
+      "role": "Mon rôle",
+      "roleV": "Coordonnateur, extraction de formes, déploiement",
+      "team": "Équipe",
+      "teamV": "8 étudiants en génie informatique",
+      "period": "Période",
+      "periodV": "Été 2025 à automne 2026",
+      "client": "Clients",
+      "clientV": "Une enseignante d'histoire et de géographie et un chargé de cours"
     },
-    "exp4": {
-      "title": "Stagiaire Analyste d'affaires",
-      "company": "Wolters Kluwer, DXG | TAA Canada",
-      "date": "Été 2026",
-      "description": "• Analyser les besoins et animer des rencontres d'échange d'idées.\n• Concevoir et présenter des solutions novatrices en collaboration avec les équipes d'architecture et d'expérience utilisateur.\n• Évaluer les impacts techniques et fonctionnels des solutions.\n• Rédiger les spécifications et découper les récits utilisateur dans un contexte de développement Agile.\n• Soutenir l'équipe de développement et valider les plans de tests."
+    "stack": "Technologies",
+    "problem": {
+      "title": "Le problème",
+      "p": "Les enseignants d'histoire et de géographie travaillent avec des cartes anciennes surchargées, souvent incomplètes, difficiles à comparer dans le temps et partagées de façon désorganisée."
     },
-    "exp1": {
-      "title": "Stagiaire Développeur Frontend",
-      "company": "Wolters Kluwer, DXG | TAA Canada",
-      "date": "Automne 2025",
-      "description": "• Développer et maintenir les fonctionnalités frontend en utilisant Angular et Rxjs.\n• Collaborer avec l'équipe backend pour l'intégration des API.\n• Implémenter des tests unitaires exécutés avec Wallaby.js.\n• Utiliser un environnement de développement dans VS Code, avec intégration de GitHub Copilot."
+    "solution": {
+      "title": "La solution"
     },
-    "exp2": {
-      "title": "Stagiaire Développeur Full-Stack",
-      "company": "Boréalis, Équipe de développement de produit",
-      "date": "Hiver 2025",
-      "description": "• Développer et maintenir une application web en JavaScript/TypeScript et Node.js dans un environnement Docker.\n• Réaliser des tests automatisés avec Cypress.\n• Migrer et mettre à jour une base de données MongoDB avec gestion des breaking changes de Mongoose."
+    "sol": {
+      "extract": {
+        "t": "Extraction",
+        "d": "Importer une carte, en extraire le texte, les couleurs et les formes, puis les repositionner sur une carte du monde standardisée."
+      },
+      "edit": {
+        "t": "Édition",
+        "d": "Filtrer, modifier ou enrichir les éléments selon l'objectif du cours."
+      },
+      "time": {
+        "t": "Ligne du temps",
+        "d": "Associer des dates aux cartes pour voir l'évolution d'un territoire."
+      },
+      "lib": {
+        "t": "Bibliothèque",
+        "d": "Partager et découvrir les cartes d'autres enseignants."
+      }
     },
-    "exp3": {
-      "title": "Stagiaire Analyste/Développeur",
-      "company": "Ville de Sherbrooke, Service des technologies de l'information",
-      "date": "Automne 2023 / Été 2024",
-      "description": "• Analyser et réaliser des projets dans l'application Maximo.\n• Évaluer et implémenter les changements pour améliorer ou corriger les fonctionnalités.\n• Recueillir et analyser les besoins pour concevoir des solutions logicielles.\n• Concevoir des rapports interactifs BIRT pour l'analyse et la visualisation des données."
+    "shot1": "Une carte de 1775 numérisée dans Atlas (à gauche), à côté de l'originale (à droite).",
+    "shot2": "L'évolution du territoire de 1783 à 1800, grâce à la ligne du temps.",
+    "role": {
+      "title": "Mon rôle",
+      "mgmt": {
+        "t": "Coordination de l'équipe",
+        "d": "Carnet de produit et sprints dans Jira, découpage des tâches selon les dépendances entre la plateforme web et les modules d'extraction, suivi des échéances et tableau de bord hebdomadaire."
+      },
+      "shapes": {
+        "t": "Extraction de formes",
+        "d": "Conception et développement du module qui extrait les formes d'une carte (flèches, territoires, symboles), du sélecteur dans l'interface Vue jusqu'à la tâche Celery en Python et OpenCV."
+      },
+      "deploy": {
+        "t": "Déploiement",
+        "d": "Mise en ligne sur Oracle Cloud pour 0 $ par mois, en HTTPS, avec un script de déploiement en une commande, des sauvegardes et un retour arrière."
+      }
+    },
+    "shapes": {
+      "title": "Zoom : l'extraction de formes",
+      "p1": "Notre premier pipeline était entièrement automatique, mais les cartes anciennes sont très bruitées : rivières, côtes, texte et hachures devenaient autant de formes parasites. Sur une carte de 1775 où l'on attendait 3 flèches, il en trouvait 28, et l'utilisateur devait supprimer le reste à la main.",
+      "p2": "J'ai comparé trois approches : raffiner le pipeline automatique, intégrer un modèle d'IA de segmentation (MobileSAM) ou laisser l'utilisateur cliquer sur les formes voulues. J'ai retenu la troisième, présentée au client et approuvée : un clic par forme, puis une segmentation par couleur dans l'espace CIE LAB avec deux seuils (hystérésis) pour capter les bords flous sans déborder sur les régions voisines.",
+      "p3": "La solution est couverte par des tests de régression (pytest) qui simulent un clic par forme de référence et exigent un IoU supérieur à 0,9."
+    },
+    "before": "Avant : extraction automatique, 28 formes",
+    "after": "Après : 3 clics, 3 formes",
+    "m1": "formes parasites",
+    "m2": "plus rapide",
+    "m3": "d'extraction par carte",
+    "m4": "nouvelle dépendance",
+    "deploy": {
+      "title": "Zoom : le déploiement",
+      "p1": "Atlas compte une douzaine de services Docker (FastAPI, Vue, PostGIS, Redis, workers Celery et IA, Keycloak). Le défi : le rendre accessible au client sans frais, de façon sécuritaire et facile à redéployer.",
+      "list": "<li><strong>0 $ par mois</strong> sur une instance ARM Oracle Cloud Always Free (4 cœurs, 24 Go).</li><li><strong>Un seul point d'entrée HTTPS</strong> via le proxy Caddy et Let's Encrypt, au lieu de quatre ports HTTP exposés.</li><li><strong>Secrets générés</strong> automatiquement, conteneurs non-root, console d'administration limitée à certaines adresses IP.</li><li><strong>Une seule commande</strong> (deploy.sh) : installation, pare-feu, migrations, sauvegarde de la base de données et vérification de chaque service.</li><li><strong>Retour arrière</strong> (rollback.sh) vers la dernière version fonctionnelle, sans perte de données.</li>"
+    },
+    "learn": {
+      "title": "Ce que j'en retiens",
+      "p1": "Atlas m'a confirmé que j'aime autant coordonner que développer : un billet bien rédigé et des dépendances anticipées font gagner du temps à toute l'équipe.",
+      "p2": "Il m'a aussi appris à appliquer à mes propres tâches la rigueur que je demande aux autres. J'ai poursuivi trop longtemps ma première version de l'extraction de formes avant de changer d'approche. Aujourd'hui, je fixe des critères d'acceptation mesurables et un point de contrôle avant de m'enfoncer dans une solution."
+    },
+    "cta": {
+      "code": "Voir le code sur GitHub"
     }
   }
 }

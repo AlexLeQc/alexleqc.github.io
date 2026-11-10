@@ -1,0 +1,6 @@
+# Fichiers et dossiers commençant par un underscore (_)
+_*
+
+# Fichiers système macOS
+.DS_Store
+

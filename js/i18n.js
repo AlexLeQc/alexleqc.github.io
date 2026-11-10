@@ -1,73 +1,81 @@
-// js/i18n.js
-class I18n {
-  constructor() {
-    this.currentLang = "fr";
-    this.translations = {};
-  }
+// Traduction FR/EN. Le HTML contient le français; on remplace au besoin.
+// data-i18n="clé"        → texte
+// data-i18n-html="clé"   → HTML (liens, gras, listes)
+// data-i18n-attr="attr:clé;attr2:clé2" → attributs (alt, title, aria-label...)
+const I18n = (() => {
+  const base = document.body.dataset.base || "";
+  const translations = {};
+  let current = "fr";
 
-  async loadLanguage(lang) {
+  function readStoredLang() {
     try {
-      const response = await fetch(`locales/${lang}.json`);
-      this.translations[lang] = await response.json();
-    } catch (error) {
-      console.error(`Error loading language ${lang}:`, error);
+      return localStorage.getItem("lang");
+    } catch (e) {
+      return null;
     }
   }
 
-  async init() {
-    await this.loadLanguage("fr");
-    await this.loadLanguage("en");
-    this.applyTranslations();
-  }
-
-  switchLanguage(lang) {
-    this.currentLang = lang;
-    document.documentElement.lang = lang;
-    this.applyTranslations();
-
-    const langToggle = document.getElementById("lang-toggle");
-    langToggle.textContent = lang === "fr" ? "EN" : "FR";
-    langToggle.setAttribute("data-lang", lang === "fr" ? "en" : "fr");
-    langToggle.title = this.t("lang.switchTo");
-    const cvBtn = document.querySelector(".lien-cv");
-    if (cvBtn) {
-      const newHref = cvBtn.getAttribute(`data-cv-${this.currentLang}`);
-      if (newHref) cvBtn.setAttribute("href", newHref);
+  function storeLang(lang) {
+    try {
+      localStorage.setItem("lang", lang);
+    } catch (e) {
+      /* stockage indisponible : on ignore */
     }
   }
 
-  t(key) {
-    const keys = key.split(".");
-    let value = this.translations[this.currentLang];
-
-    for (const k of keys) {
-      value = value?.[k];
-    }
-
-    return value || key;
+  async function load(lang) {
+    if (translations[lang]) return translations[lang];
+    const res = await fetch(`${base}locales/${lang}.json`);
+    translations[lang] = await res.json();
+    return translations[lang];
   }
 
-  applyTranslations() {
-    const elements = document.querySelectorAll("[data-i18n]");
-    elements.forEach((element) => {
-      const key = element.getAttribute("data-i18n");
-      const translation = this.t(key);
+  function t(key) {
+    return key.split(".").reduce((o, k) => (o ? o[k] : undefined), translations[current]);
+  }
 
-      if (translation) {
-        if (element.classList.contains("bio")) {
-          element.innerHTML = translation.replace(
-            "Université de Sherbrooke",
-            '<a href="https://www.usherbrooke.ca/genie" target="_blank" rel="noopener noreferrer">Université de Sherbrooke</a>',
-          );
-        } else if (element.classList.contains("experience-description")) {
-          element.innerHTML = translation.replace(/\n/g, "<br>");
-        } else {
-          element.textContent = translation;
-        }
-      }
+  function apply() {
+    document.documentElement.lang = current;
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const v = t(el.dataset.i18n);
+      if (typeof v === "string") el.textContent = v;
+    });
+    document.querySelectorAll("[data-i18n-html]").forEach((el) => {
+      const v = t(el.dataset.i18nHtml);
+      if (typeof v === "string") el.innerHTML = v;
+    });
+    document.querySelectorAll("[data-i18n-attr]").forEach((el) => {
+      el.dataset.i18nAttr.split(";").forEach((pair) => {
+        const [attr, key] = pair.split(":");
+        const v = t(key);
+        if (typeof v === "string") el.setAttribute(attr, v);
+      });
+    });
+    document.querySelectorAll(".js-cv").forEach((el) => {
+      const href = el.getAttribute(`data-cv-${current}`);
+      if (href) el.setAttribute("href", href);
     });
   }
-}
 
-const i18n = new I18n();
-document.addEventListener("DOMContentLoaded", () => i18n.init());
+  async function setLang(lang) {
+    try {
+      await load(lang);
+    } catch (e) {
+      console.error("Traduction introuvable :", lang, e);
+      return;
+    }
+    current = lang;
+    storeLang(lang);
+    apply();
+  }
+
+  function init() {
+    const params = new URLSearchParams(location.search);
+    const wanted = params.get("lang") || readStoredLang();
+    if (wanted === "en") setLang("en");
+  }
+
+  return { init, setLang, t, get current() { return current; } };
+})();
+
+document.addEventListener("DOMContentLoaded", I18n.init);

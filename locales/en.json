@@ -1,70 +1,191 @@
 {
-  "nav": {
-    "home": "Home",
-    "projects": "Projects"
-  },
-  "profile": {
+  "meta": {
     "title": "Alexis Guérard",
-    "bio": "Computer Engineering student at Université de Sherbrooke",
-    "cv": "Download my CV"
+    "desc": "Portfolio of Alexis Guérard, graduating computer engineering student at Université de Sherbrooke: business analysis, web development and team coordination.",
+    "atlasTitle": "Atlas — Case study | Alexis Guérard",
+    "atlasDesc": "Atlas, a web platform for digitizing historical maps: team coordination, shape extraction and deployment."
   },
-  "social": {
-    "github": "GitHub",
-    "linkedin": "LinkedIn"
-  },
-  "projects": {
-    "title": "My Projects",
-    "description": "Computer engineering achievements and personal projects",
-    "atlas": "Atlas (Major Design Project)",
-    "keepTheTrackk": "KeepTheTrackk",
-    "miniGolf": "Mini Golf",
-    "integrationRun": "Integration Run",
-    "storyTelling": "Story Telling"
-  },
-  "footer": {
-    "copyright": "© 2026 Alexis Guérard."
-  },
-  "toast": {
-    "emailCopied": "Email copied!"
+  "nav": {
+    "projects": "Projects",
+    "experience": "Experience",
+    "about": "About",
+    "contact": "Contact",
+    "cv": "Resume",
+    "menu": "Open menu"
   },
   "lang": {
-    "switchTo": "Passer en français"
+    "switchTo": "Passer en français",
+    "label": "FR"
   },
-  "about": {
-    "title": "About Me",
-    "tab": "About",
-    "experienceTab": "Experience",
-    "experienceTitle": "Professional Experience",
-    "description": "Passionate about computer science and technology, I am a computer engineering student at Université de Sherbrooke. My journey has allowed me to develop strong skills in programming, algorithm design and web development.",
-    "interests": "Interested in web development, distributed architectures, and artificial intelligence, I enjoy taking on technical challenges and creating innovative solutions.",
-    "experience": "During my studies and my internships, I have had the opportunity to work on various projects, from web application development to embedded system design, including participation in programming competitions.",
-    "skills": {
-      "tech": "Technologies",
-      "tools": "Tools"
+  "hero": {
+    "title": "Hi! I'm Alexis, a graduating computer engineering student.",
+    "p1": "I love turning people's needs into concrete web solutions. Over five internships, I moved from frontend and full-stack development to <strong>business analysis</strong>: writing user stories, facilitating workshops and bridging the gap between users and developers.",
+    "p2": "In my capstone project, Atlas, I coordinated a team of eight while building the shape extraction module and deploying the application.",
+    "p3": "I graduate from Université de Sherbrooke in December 2026 and I'm looking for my first full-time role as an <strong>analyst</strong> or <strong>developer</strong>.",
+    "badge": "Open to work",
+    "cv": "Download my resume",
+    "photoAlt": "Photo of Alexis Guérard"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "A few school and personal projects.",
+    "case": "Read the case study",
+    "code": "Source code",
+    "play": "Play",
+    "atlas": {
+      "tag": "Capstone project",
+      "desc": "Open web platform that helps history and geography teachers digitize old maps: upload an image, Atlas extracts its text, colors and shapes, then places them on a world map with a timeline.",
+      "role": "<strong>My role:</strong> team coordination, shape extraction and deployment.",
+      "imgAlt": "Atlas interface: a digitized 1775 map next to the original"
     },
-    "exp4": {
-      "title": "Business Analyst Intern",
-      "company": "Wolters Kluwer, DXG | TAA Canada",
+    "ir": {
+      "tag": "Personal project · 2026",
+      "desc": "Three-lane mobile runner game built for the engineering orientation week, with an online leaderboard. Built quickly in collaboration with AI coding agents.",
+      "imgAlt": "Integration Run game start screen"
+    },
+    "mg": {
+      "tag": "School project · 2nd term",
+      "imgAlt": "Mini-G game start screen",
+      "desc": "My second-term project, reimagined as a web game you can play right in the browser."
+    },
+    "others": "Other projects",
+    "story": {
+      "desc": "Small website to create and tell stories."
+    },
+    "keep": {
+      "desc": "Personal exploration project, hosted on Firebase."
+    }
+  },
+  "exp": {
+    "title": "Experience",
+    "subtitle": "Five co-op internships, from code to analysis.",
+    "ba": {
+      "role": "Business Analyst Intern",
       "date": "Summer 2026",
-      "description": "• Analyze requirements and facilitate brainstorming sessions.\n• Design and present innovative solutions in collaboration with architecture and user experience teams.\n• Assess the technical and functional impacts of solutions.\n• Write specifications and break down user stories in an Agile development context.\n• Support the development team and validate test plans."
+      "desc": "<li>Analyzed needs for a tax preparation web application used by accounting firms.</li><li>Translated regulatory requirements into user stories and acceptance criteria.</li><li>Facilitated ideation workshops with architecture and UX teams; presented sprint and PI demos.</li>"
     },
-    "exp1": {
-      "title": "Frontend Developer Intern",
-      "company": "Wolters Kluwer, DXG | TAA Canada",
+    "fe": {
+      "role": "Frontend Developer Intern",
       "date": "Fall 2025",
-      "description": "• Develop and maintain frontend features using Angular and Rxjs.\n• Collaborate with the backend team for API integration.\n• Implement unit tests executed with Wallaby.js.\n• Work in a development environment in VS Code, with GitHub Copilot integration."
+      "desc": "<li>Built features with Angular and RxJS, working with the backend team on API integration.</li><li>Unit tests with Wallaby.js; GitHub Copilot used daily.</li>"
     },
-    "exp2": {
-      "title": "Full-Stack Developer Intern",
+    "bo": {
+      "role": "Full-Stack Developer Intern",
       "company": "Boréalis, Product Development Team",
       "date": "Winter 2025",
-      "description": "• Develop and maintain a web application in JavaScript/TypeScript and Node.js in a Docker environment.\n• Implement automated tests with Cypress.\n• Migrate and update a MongoDB database with management of Mongoose breaking changes."
+      "desc": "<li>Web application in TypeScript and Node.js in a Docker environment, with automated Cypress tests.</li><li>Migrated a MongoDB database while handling Mongoose breaking changes.</li>"
     },
-    "exp3": {
-      "title": "Analyst/Developer Intern",
+    "vs": {
+      "role": "Analyst/Developer Intern",
       "company": "City of Sherbrooke, Information Technology Services",
-      "date": "Fall 2023 / Summer 2024",
-      "description": "• Analyze and implement projects in the Maximo application.\n• Evaluate and implement changes to improve or fix functionalities.\n• Collect and analyze requirements to design software solutions.\n• Design interactive BIRT reports for data analysis and visualization."
+      "date": "Fall 2023 and Summer 2024",
+      "desc": "<li>Gathered user needs and configured solutions in the IBM Maximo enterprise software.</li><li>SQL queries and interactive BIRT reports to track municipal operations.</li>"
+    }
+  },
+  "about": {
+    "title": "About",
+    "p1": "I'm completing a bachelor's degree in computer engineering (co-op program) at Université de Sherbrooke, with a <strong>4.00 / 4.30 GPA</strong> and a specialization in computer security.",
+    "p2": "What drives me is understanding a real need and delivering something that truly makes users' lives easier. I'm especially interested in bringing AI into products and ways of working; I use it myself every day.",
+    "p3": "Away from the keyboard: climbing, hiking, snowboarding and the outdoors in general. I also served as president of my engineering class committee.",
+    "skills": {
+      "dev": "Development",
+      "data": "Data",
+      "methods": "Tools and methods",
+      "ai": "AI"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "text": "A job, a project or just a question? Write to me, I reply quickly.",
+    "copy": "Copy email"
+  },
+  "toast": {
+    "copied": "Email copied!"
+  },
+  "footer": {
+    "text": "© 2026 Alexis Guérard"
+  },
+  "case": {
+    "back": "Back to projects",
+    "eyebrow": "Case study · Capstone design project",
+    "lead": "An open web platform to digitize, compare and share historical maps in the classroom.",
+    "meta": {
+      "role": "My role",
+      "roleV": "Coordinator, shape extraction, deployment",
+      "team": "Team",
+      "teamV": "8 computer engineering students",
+      "period": "Timeline",
+      "periodV": "Summer 2025 to Fall 2026",
+      "client": "Clients",
+      "clientV": "A history and geography teacher and a university lecturer"
+    },
+    "stack": "Technologies",
+    "problem": {
+      "title": "The problem",
+      "p": "History and geography teachers work with old maps that are overloaded, often incomplete, hard to compare over time and shared in a disorganized way."
+    },
+    "solution": {
+      "title": "The solution"
+    },
+    "sol": {
+      "extract": {
+        "t": "Extraction",
+        "d": "Upload a map, extract its text, colors and shapes, then place them on a standardized world map."
+      },
+      "edit": {
+        "t": "Editing",
+        "d": "Filter, edit or enrich the elements to fit the lesson's goals."
+      },
+      "time": {
+        "t": "Timeline",
+        "d": "Attach dates to maps to see how a territory evolved."
+      },
+      "lib": {
+        "t": "Library",
+        "d": "Share and discover maps from other teachers."
+      }
+    },
+    "shot1": "A 1775 map digitized in Atlas (left), next to the original (right).",
+    "shot2": "How the territory evolved from 1783 to 1800, using the timeline.",
+    "role": {
+      "title": "My role",
+      "mgmt": {
+        "t": "Team coordination",
+        "d": "Product backlog and sprints in Jira, task breakdown based on dependencies between the web platform and the extraction modules, deadline tracking and a weekly dashboard."
+      },
+      "shapes": {
+        "t": "Shape extraction",
+        "d": "Designed and built the module that extracts shapes from a map (arrows, territories, symbols), from the picker in the Vue interface to the Celery task in Python and OpenCV."
+      },
+      "deploy": {
+        "t": "Deployment",
+        "d": "Put Atlas online on Oracle Cloud for $0 per month, over HTTPS, with a one-command deployment script, backups and rollback."
+      }
+    },
+    "shapes": {
+      "title": "Deep dive: shape extraction",
+      "p1": "Our first pipeline was fully automatic, but old maps are very noisy: rivers, coastlines, text and hatching all turned into unwanted shapes. On a 1775 map where we expected 3 arrows, it found 28, and users had to delete the rest by hand.",
+      "p2": "I compared three approaches: refining the automatic pipeline, integrating an AI segmentation model (MobileSAM), or letting users click the shapes they want. I chose the third, which was presented to and approved by the client: one click per shape, then color segmentation in the CIE LAB space with two thresholds (hysteresis) to capture soft edges without spilling into neighboring regions.",
+      "p3": "The solution is covered by regression tests (pytest) that simulate one click per reference shape and require an IoU above 0.9."
+    },
+    "before": "Before: automatic extraction, 28 shapes",
+    "after": "After: 3 clicks, 3 shapes",
+    "m1": "unwanted shapes",
+    "m2": "faster",
+    "m3": "extraction per map",
+    "m4": "new dependencies",
+    "deploy": {
+      "title": "Deep dive: deployment",
+      "p1": "Atlas runs about a dozen Docker services (FastAPI, Vue, PostGIS, Redis, Celery and AI workers, Keycloak). The challenge: make it available to the client at no cost, securely, and easy to redeploy.",
+      "list": "<li><strong>$0 per month</strong> on an Oracle Cloud Always Free ARM instance (4 cores, 24 GB).</li><li><strong>A single HTTPS entry point</strong> through the Caddy proxy and Let's Encrypt, instead of four exposed HTTP ports.</li><li><strong>Generated secrets</strong>, non-root containers, admin console restricted to specific IP addresses.</li><li><strong>One command</strong> (deploy.sh): setup, firewall, migrations, database backup and a health check on every service.</li><li><strong>Rollback</strong> (rollback.sh) to the last working version, with no data loss.</li>"
+    },
+    "learn": {
+      "title": "What I took away",
+      "p1": "Atlas confirmed that I enjoy coordinating as much as developing: a well-written ticket and anticipated dependencies save the whole team time.",
+      "p2": "It also taught me to hold my own tasks to the standard I ask of others. I pushed my first version of shape extraction too long before changing approach. Now I set measurable acceptance criteria and a checkpoint before committing to a solution."
+    },
+    "cta": {
+      "code": "View the code on GitHub"
     }
   }
 }
