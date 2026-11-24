@@ -3,7 +3,9 @@
     "title": "Alexis Guérard",
     "desc": "Portfolio of Alexis Guérard, graduating computer engineering student at Université de Sherbrooke: business analysis, web development and team coordination.",
     "atlasTitle": "Atlas — Case study | Alexis Guérard",
-    "atlasDesc": "Atlas, a web platform for digitizing historical maps: team coordination, shape extraction and deployment."
+    "atlasDesc": "Atlas, a web platform for digitizing historical maps: team coordination, shape extraction and deployment.",
+    "sylTitle": "SprintYourLife — Case study | Alexis Guérard",
+    "sylDesc": "SprintYourLife, a web app built with Specification-Driven Development (SDD) and Claude Code: specs, ADRs, traceability and UAT."
   },
   "nav": {
     "projects": "Projects",
@@ -20,7 +22,7 @@
   "hero": {
     "title": "Hi! I'm Alexis, a graduating computer engineering student.",
     "p1": "I love turning people's needs into concrete web solutions. Over five internships, I moved from frontend and full-stack development to <strong>business analysis</strong>: writing user stories, facilitating workshops and bridging the gap between users and developers.",
-    "p2": "In my capstone project, Atlas, I coordinated a team of eight while building the shape extraction module and deploying the application.",
+    "p2": "In my capstone project, Atlas, I coordinated a team of eight while building the shape extraction module and deploying the application. In my personal project SprintYourLife, I apply Specification-Driven Development with Claude Code: I'm the PO and analyst, the agent implements.",
     "p3": "I graduate from Université de Sherbrooke in December 2026 and I'm looking for my first full-time role as an <strong>analyst</strong> or <strong>developer</strong>.",
     "badge": "Open to work",
     "cv": "Download my resume",
@@ -54,6 +56,12 @@
     },
     "keep": {
       "desc": "Personal exploration project, hosted on Firebase."
+    },
+    "syl": {
+      "tag": "Personal project · In progress",
+      "desc": "A personal web app that answers \"what could I do right now?\" in seconds and turns my learning goals into two-week sprints. Above all, a case study in Specification-Driven Development (SDD) with agentic AI.",
+      "role": "<strong>My role:</strong> Product Owner and analyst. I write the specs and acceptance criteria, make the decisions and run UAT; Claude Code implements.",
+      "imgAlt": "SprintYourLife on a phone: the sign-in page and the task list in light and dark mode"
     }
   },
   "exp": {
@@ -186,6 +194,93 @@
     },
     "cta": {
       "code": "View the code on GitHub"
+    }
+  },
+  "syl": {
+    "eyebrow": "Case study · Personal project in progress",
+    "lead": "A web app to replace idle scrolling with \"sidequests\", and above all a testbed for Specification-Driven Development with agentic AI.",
+    "meta": {
+      "role": "My role",
+      "roleV": "Product Owner, analyst, UAT",
+      "impl": "Implementation",
+      "implV": "Claude Code, driven by the specs",
+      "period": "Timeline",
+      "periodV": "Since November 2026",
+      "status": "Status",
+      "statusV": "In daily use on my phone"
+    },
+    "cta": {
+      "code": "View the repository on GitHub"
+    },
+    "shot1": "The sign-in page and the task list, in light and dark mode. Screenshots generated from fake data by the test suite.",
+    "live": {
+      "title": "Live from the repository",
+      "p": "The project is moving right now. This panel reads the public GitHub repository on every visit.",
+      "ci": "Latest continuous integration on main",
+      "prs": "Latest merged pull requests",
+      "backlog": "Spec progress",
+      "loading": "Loading…",
+      "error": "Can't reach GitHub right now.",
+      "ok": "Passed",
+      "fail": "Failed",
+      "running": "Running",
+      "history": "See the full history"
+    },
+    "spec": {
+      "001": "001 Foundation",
+      "002": "002 Tasks",
+      "003": "003 Portfolio-ready",
+      "004": "004 Sidequest bank"
+    },
+    "st": {
+      "delivered": "Delivered",
+      "uat": "In UAT",
+      "validated": "Spec validated"
+    },
+    "problem": {
+      "title": "The need",
+      "p": "In idle moments, I picked up my phone and scrolled by default. My ideas for things to learn existed, scattered in notes, but they weren't in front of me at the moment of choice. My obligations worked because they had deadlines. So the app puts tasks and sidequests in one place, and breaks goals into two-week sprints with a measurable criterion."
+    },
+    "process": {
+      "title": "The approach: spec first",
+      "p": "The documentation is the source of truth. No code is written without a validated spec, and when the code and the spec disagree, the spec wins, or it gets changed on purpose in a new version."
+    },
+    "step": {
+      "spec": {
+        "t": "Spec",
+        "d": "User stories, Given/When/Then acceptance criteria, numbered business rules, open questions with their answers, a UAT checklist."
+      },
+      "plan": {
+        "t": "Plan and ADRs",
+        "d": "The AI proposes options with a recommendation; I decide. Every significant choice becomes an Architecture Decision Record."
+      },
+      "build": {
+        "t": "Tasks, code and tests",
+        "d": "Small steps with a \"done when\", checkpoints where work stops for me, and a progress log with evidence."
+      },
+      "uat": {
+        "t": "UAT",
+        "d": "I test on production, on my real phone, before calling a spec delivered. Any friction goes back into the backlog."
+      }
+    },
+    "ai": {
+      "title": "Working with agentic AI",
+      "p1": "Most of the code is written by Claude Code. My work is the analysis, the decisions and their reasons, the acceptance criteria, and verifying what the AI produces.",
+      "list": "<li><strong>Validate, don't just accept.</strong> An authentication library choice rested on outdated information. The decision wasn't erased: a new ADR (0011) replaces it and explains why.</li><li><strong>Explicit checkpoints</strong> where the agent stops and waits for my decision instead of running with an assumption.</li><li><strong>Evidence for every criterion</strong>: the agent records how each acceptance criterion was verified, and I check it again in UAT.</li><li><strong>Guardrails in the repository</strong>: business rules isolated in a pure module, enforced by a lint rule; nothing reaches main without green CI.</li>"
+    },
+    "trace": {
+      "title": "One requirement, from spec to production",
+      "p": "Traceability is concrete: every rule has an id that carries all the way into the test names. Example with BR-5, \"a task is overdue when its date has passed or, if it has a time, when that time has passed\".",
+      "list": "<li><strong>Spec</strong>: rule BR-5 and criterion AC-2.3 (an overdue task shows \"Was due…\" in red).</li><li><strong>Code</strong>: an <code>isOverdue()</code> function in the domain module, with no framework or database.</li><li><strong>Unit test</strong> \"isOverdue (BR-5)\": the edge cases (midnight in Toronto, the exact minute, no date).</li><li><strong>End-to-end test</strong> named after AC-2.1 to AC-2.6, in a real browser against a production build.</li><li><strong>CI</strong> on every pull request, then <strong>UAT</strong> on the phone.</li>"
+    },
+    "m1": "pull requests merged since November 16",
+    "m2": "architecture decisions (ADRs)",
+    "m3": "unit tests on business rules",
+    "m4": "end-to-end tests, including 20 accessibility scans",
+    "learn": {
+      "title": "What I took away",
+      "p1": "A good spec is the strongest lever you have on a coding agent: the sharper the acceptance criteria, the fewer back-and-forths, and the simpler the verification.",
+      "p2": "Next: spec 004, the sidequest bank, is validated and ready to plan. The panel above tracks its progress."
     }
   }
 }

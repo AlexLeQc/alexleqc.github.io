@@ -886,6 +886,252 @@ figcaption {
   color: var(--text);
 }
 
+/* ---------- SprintYourLife ---------- */
+.card-media-center img,
+.card-feature .card-media-center img {
+  object-position: center;
+}
+
+.eyebrow-live {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.eyebrow-live .dot,
+.live-head h2 .dot {
+  flex: none;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  50% {
+    box-shadow: 0 0 0 7px rgba(34, 197, 94, 0.08);
+  }
+}
+
+.roles-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.live {
+  margin-top: clamp(32px, 5vw, 48px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: clamp(20px, 3vw, 28px);
+  background: linear-gradient(180deg, var(--soft), #fff 70%);
+}
+
+.live-head h2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.live-head p {
+  color: var(--muted);
+  font-size: 0.94rem;
+  margin-top: 4px;
+}
+
+.live-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+  gap: 28px;
+  margin-top: 22px;
+}
+
+.live-col,
+.pr-list li {
+  min-width: 0;
+}
+
+.live a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.live-col .label {
+  margin-bottom: 10px;
+}
+
+.live-col .label ~ .label {
+  margin-top: 22px;
+}
+
+.live-ci {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.live-ci:hover,
+.spec-list a:hover,
+.pr-list a:hover {
+  border-color: var(--text);
+}
+
+.ci-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #a1a1aa;
+  flex: none;
+}
+
+.live-ci.ok .ci-dot { background: #22c55e; }
+.live-ci.fail .ci-dot { background: #dc2626; }
+.live-ci.running .ci-dot { background: #f59e0b; }
+
+.ci-when {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.spec-list,
+.pr-list {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.spec-list a,
+.pr-list a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  font-size: 0.92rem;
+  transition: border-color 0.2s ease;
+}
+
+.spec-list a > span:first-child {
+  flex: 1;
+  font-weight: 600;
+}
+
+.pill {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.pill-delivered { background: #ecfdf3; color: #166534; }
+.pill-uat { background: #fef3c7; color: #92400e; }
+.pill-validated { background: var(--accent-soft); color: #1d4ed8; }
+
+.pr-num {
+  font-weight: 700;
+  color: var(--accent);
+  flex: none;
+}
+
+.pr-title {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pr-when {
+  color: var(--muted);
+  font-size: 0.82rem;
+  white-space: nowrap;
+  flex: none;
+}
+
+.pr-empty {
+  color: var(--muted);
+  font-size: 0.92rem;
+  padding: 9px 0;
+}
+
+.live .live-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.trace {
+  counter-reset: trace;
+  list-style: none;
+  margin: 8px 0 24px;
+}
+
+.trace li {
+  counter-increment: trace;
+  position: relative;
+  padding: 0 0 14px 44px;
+  border-left: 2px solid var(--line);
+  margin-left: 14px;
+}
+
+.trace li:last-child {
+  border-left-color: transparent;
+}
+
+.trace li::before {
+  content: counter(trace);
+  position: absolute;
+  left: -15px;
+  top: -2px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+}
+
+.trace strong,
+.prose code {
+  color: var(--text);
+}
+
+.prose code {
+  font-size: 0.9em;
+  background: var(--soft);
+  padding: 1px 6px;
+  border-radius: 6px;
+}
+
+@media (max-width: 900px) {
+  .roles-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .live-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .roles-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---------- Animation ---------- */
 .reveal {
   opacity: 0;

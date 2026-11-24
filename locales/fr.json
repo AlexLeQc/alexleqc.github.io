@@ -3,7 +3,9 @@
     "title": "Alexis Guérard",
     "desc": "Portfolio d'Alexis Guérard, finissant en génie informatique à l'Université de Sherbrooke : analyse d'affaires, développement web et coordination d'équipe.",
     "atlasTitle": "Atlas — Étude de cas | Alexis Guérard",
-    "atlasDesc": "Atlas, une plateforme web pour numériser des cartes historiques : coordination d'équipe, extraction de formes et déploiement."
+    "atlasDesc": "Atlas, une plateforme web pour numériser des cartes historiques : coordination d'équipe, extraction de formes et déploiement.",
+    "sylTitle": "SprintYourLife — Étude de cas | Alexis Guérard",
+    "sylDesc": "SprintYourLife, une application web construite par le développement dirigé par les spécifications (SDD) avec Claude Code : specs, ADR, traçabilité et UAT."
   },
   "nav": {
     "projects": "Projets",
@@ -20,7 +22,7 @@
   "hero": {
     "title": "Bonjour! Je suis Alexis, finissant en génie informatique.",
     "p1": "J'aime transformer les besoins des gens en solutions web concrètes. Au fil de cinq stages, je suis passé du développement frontend et full-stack à l'<strong>analyse d'affaires</strong> : rédiger des récits utilisateurs, animer des ateliers et faire le pont entre les utilisateurs et les développeurs.",
-    "p2": "Dans mon projet de fin d'études, Atlas, j'ai coordonné une équipe de huit tout en développant l'extraction de formes et le déploiement de l'application.",
+    "p2": "Dans mon projet de fin d'études, Atlas, j'ai coordonné une équipe de huit tout en développant l'extraction de formes et le déploiement de l'application. Dans mon projet personnel SprintYourLife, j'applique le développement dirigé par les spécifications avec Claude Code : je suis le PO et l'analyste, l'agent implémente.",
     "p3": "Je termine mon baccalauréat à l'Université de Sherbrooke en décembre 2026 et je cherche un premier poste d'<strong>analyste</strong> ou de <strong>développeur</strong>.",
     "badge": "Ouvert aux opportunités",
     "cv": "Télécharger mon CV",
@@ -54,6 +56,12 @@
     },
     "keep": {
       "desc": "Projet personnel d'exploration, hébergé sur Firebase."
+    },
+    "syl": {
+      "tag": "Projet personnel · En cours",
+      "desc": "Application web personnelle qui répond en quelques secondes à « qu'est-ce que je pourrais faire maintenant? » et transforme mes objectifs d'apprentissage en sprints de deux semaines. Surtout, une étude de cas en développement dirigé par les spécifications (SDD) avec l'IA agentive.",
+      "role": "<strong>Mon rôle :</strong> Product Owner et analyste. J'écris les specs et les critères d'acceptation, je prends les décisions et je fais l'UAT; Claude Code implémente.",
+      "imgAlt": "SprintYourLife sur téléphone : la page de connexion et la liste de tâches en mode clair et sombre"
     }
   },
   "exp": {
@@ -186,6 +194,93 @@
     },
     "cta": {
       "code": "Voir le code sur GitHub"
+    }
+  },
+  "syl": {
+    "eyebrow": "Étude de cas · Projet personnel en cours",
+    "lead": "Une application web pour remplacer le défilement par des « quêtes secondaires », et surtout un terrain d'essai du développement dirigé par les spécifications avec l'IA agentive.",
+    "meta": {
+      "role": "Mon rôle",
+      "roleV": "Product Owner, analyste, UAT",
+      "impl": "Implémentation",
+      "implV": "Claude Code, guidé par les specs",
+      "period": "Période",
+      "periodV": "Depuis novembre 2026",
+      "status": "Statut",
+      "statusV": "En usage quotidien sur mon téléphone"
+    },
+    "cta": {
+      "code": "Voir le dépôt sur GitHub"
+    },
+    "shot1": "La page de connexion et la liste de tâches, en mode clair et sombre. Captures générées à partir de fausses données par la suite de tests.",
+    "live": {
+      "title": "En direct du dépôt",
+      "p": "Le projet avance en ce moment. Ce panneau lit le dépôt GitHub public à chaque visite.",
+      "ci": "Dernière intégration continue sur main",
+      "prs": "Dernières demandes de fusion",
+      "backlog": "Avancement des specs",
+      "loading": "Chargement…",
+      "error": "Impossible de joindre GitHub pour l'instant.",
+      "ok": "Réussie",
+      "fail": "En échec",
+      "running": "En cours",
+      "history": "Voir tout l'historique"
+    },
+    "spec": {
+      "001": "001 Fondations",
+      "002": "002 Tâches",
+      "003": "003 Prêt pour le portfolio",
+      "004": "004 Banque de quêtes secondaires"
+    },
+    "st": {
+      "delivered": "Livrée",
+      "uat": "En UAT",
+      "validated": "Spec validée"
+    },
+    "problem": {
+      "title": "Le besoin",
+      "p": "Dans les moments creux, je prenais mon téléphone et je défilais par défaut. Mes idées de choses à apprendre existaient, éparpillées dans des notes, mais elles n'étaient pas devant moi au moment de choisir. Mes obligations, elles, fonctionnaient parce qu'elles avaient des échéances. L'application réunit donc les tâches et les quêtes secondaires au même endroit, et découpe les objectifs en sprints de deux semaines avec un critère mesurable."
+    },
+    "process": {
+      "title": "La démarche : la spec d'abord",
+      "p": "La documentation est la source de vérité. Aucun code n'est écrit sans spec validée, et quand le code et la spec divergent, c'est la spec qui gagne, ou elle est modifiée volontairement dans une nouvelle version."
+    },
+    "step": {
+      "spec": {
+        "t": "Spec",
+        "d": "Récits utilisateur, critères d'acceptation Given/When/Then, règles d'affaires numérotées, questions ouvertes et leurs réponses, liste d'UAT."
+      },
+      "plan": {
+        "t": "Plan et ADR",
+        "d": "L'IA propose des options avec une recommandation; je décide. Chaque choix important devient un Architecture Decision Record."
+      },
+      "build": {
+        "t": "Tâches, code et tests",
+        "d": "Petites étapes avec un « terminé quand », des points de contrôle où le travail s'arrête pour moi, et un journal de preuves."
+      },
+      "uat": {
+        "t": "UAT",
+        "d": "Je teste en production, sur mon vrai téléphone, avant de déclarer une spec livrée. Les frictions repartent dans le carnet."
+      }
+    },
+    "ai": {
+      "title": "Travailler avec l'IA agentive",
+      "p1": "La majeure partie du code est écrite par Claude Code. Mon travail, c'est l'analyse, les décisions et leurs raisons, les critères d'acceptation et la vérification de ce que l'IA produit.",
+      "list": "<li><strong>Valider, pas seulement accepter.</strong> Un choix de bibliothèque d'authentification reposait sur une information dépassée. La décision n'a pas été effacée : un nouvel ADR (0011) la remplace et explique pourquoi.</li><li><strong>Des points de contrôle explicites</strong> où l'agent s'arrête et attend ma décision, au lieu de foncer sur une hypothèse.</li><li><strong>Des preuves pour chaque critère</strong> : l'agent consigne comment chaque critère d'acceptation a été vérifié, et je le revalide en UAT.</li><li><strong>Des garde-fous dans le dépôt</strong> : règles d'affaires isolées dans un module pur, imposé par une règle de lint; rien n'entre sur main sans CI verte.</li>"
+    },
+    "trace": {
+      "title": "Une exigence, de la spec à la production",
+      "p": "La traçabilité est concrète : chaque règle a un identifiant qu'on retrouve jusque dans le nom des tests. Exemple avec BR-5, « une tâche est en retard quand sa date est passée ou, si elle a une heure, quand cette heure est passée ».",
+      "list": "<li><strong>Spec</strong> : la règle BR-5 et le critère AC-2.3 (une tâche en retard affiche « Was due… » en rouge).</li><li><strong>Code</strong> : une fonction <code>isOverdue()</code> dans le module de domaine, sans cadriciel ni base de données.</li><li><strong>Test unitaire</strong> « isOverdue (BR-5) » : les cas limites (minuit à Toronto, la minute exacte, aucune date).</li><li><strong>Test de bout en bout</strong> nommé d'après AC-2.1 à AC-2.6, dans un vrai navigateur sur une version de production.</li><li><strong>CI</strong> sur chaque demande de fusion, puis <strong>UAT</strong> sur le téléphone.</li>"
+    },
+    "m1": "demandes de fusion (PR) depuis le 16 novembre",
+    "m2": "décisions d'architecture (ADR)",
+    "m3": "tests unitaires des règles d'affaires",
+    "m4": "tests de bout en bout, dont 20 d'accessibilité",
+    "learn": {
+      "title": "Ce que j'en retiens",
+      "p1": "Une bonne spec est le meilleur levier qu'on a sur un agent de code : plus les critères d'acceptation sont précis, moins il y a d'allers-retours, et plus la vérification est simple.",
+      "p2": "La suite : la spec 004, la banque de quêtes secondaires, est validée et prête à planifier. Le panneau ci-dessus suit son avancement."
     }
   }
 }

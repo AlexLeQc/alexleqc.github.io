@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="meta.sylTitle">SprintYourLife — Étude de cas | Alexis Guérard</title>
+    <meta name="description" content="SprintYourLife, une application web construite par le développement dirigé par les spécifications (SDD) avec Claude Code : specs, ADR, traçabilité et UAT." data-i18n-attr="content:meta.sylDesc" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="SprintYourLife — Étude de cas | Alexis Guérard" />
+    <meta property="og:description" content="SprintYourLife, une application web construite par le développement dirigé par les spécifications (SDD) avec Claude Code : specs, ADR, traçabilité et UAT." />
+    <meta property="og:url" content="https://alexleqc.github.io/projets/sprintyourlife.html" />
+    <meta property="og:image" content="https://alexleqc.github.io/assets/images/photo.jpg" />
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/cloud.svg" />
+    <link rel="stylesheet" href="../style.css?v=490c8b41" />
+  </head>
+  <body data-base="../">
+    <div class="fixed-bg" aria-hidden="true"></div>
+    <div class="page">
+      <header class="site-header">
+        <a class="brand" href="../index.html">Alexis Guérard</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-i18n-attr="aria-label:nav.menu" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" id="site-nav">
+          <a href="../index.html#projets" data-i18n="nav.projects">Projets</a>
+          <a href="../index.html#experience" data-i18n="nav.experience">Expérience</a>
+          <a href="../index.html#a-propos" data-i18n="nav.about">À propos</a>
+          <a href="../index.html#contact" data-i18n="nav.contact">Contact</a>
+          <div class="nav-actions">
+            <button class="lang-btn" id="lang-toggle" type="button" data-i18n="lang.label" data-i18n-attr="title:lang.switchTo" title="Switch to English">EN</button>
+            <a class="btn btn-dark btn-sm js-cv" href="../assets/CV_AlexisGuerard_2026_FR.pdf" data-cv-fr="../assets/CV_AlexisGuerard_2026_FR.pdf" data-cv-en="../assets/CV_AlexisGuerard_2026_EN.pdf" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg><span data-i18n="nav.cv">CV</span></a>
+          </div>
+        </nav>
+      </header>
+      <main class="case">
+        <a class="back-link" href="../index.html#projets"><svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M19 12H5m6 6-6-6 6-6"/></svg><span data-i18n="case.back">Retour aux projets</span></a>
+
+        <section class="case-hero">
+          <p class="eyebrow eyebrow-live"><span class="dot" aria-hidden="true"></span><span data-i18n="syl.eyebrow">Étude de cas · Projet personnel en cours</span></p>
+          <h1>SprintYourLife</h1>
+          <p class="lead" data-i18n="syl.lead">Une application web pour remplacer le défilement par des « quêtes secondaires », et surtout un terrain d'essai du développement dirigé par les spécifications avec l'IA agentive.</p>
+          <dl class="case-meta"><div><dt data-i18n="syl.meta.role">Mon rôle</dt><dd data-i18n="syl.meta.roleV">Product Owner, analyste, UAT</dd></div><div><dt data-i18n="syl.meta.impl">Implémentation</dt><dd data-i18n="syl.meta.implV">Claude Code, guidé par les specs</dd></div><div><dt data-i18n="syl.meta.period">Période</dt><dd data-i18n="syl.meta.periodV">Depuis novembre 2026</dd></div><div><dt data-i18n="syl.meta.status">Statut</dt><dd data-i18n="syl.meta.statusV">En usage quotidien sur mon téléphone</dd></div></dl>
+          <div class="case-stack">
+            <h2 class="label" data-i18n="case.stack">Technologies</h2>
+            <ul class="tags"><li>Spec-Driven Development</li><li>Claude Code</li><li>ADR</li><li>Given/When/Then</li><li>UAT</li><li>Next.js</li><li>TypeScript</li><li>PostgreSQL</li><li>Vitest</li><li>Playwright</li><li>axe</li><li>GitHub Actions</li><li>Vercel</li></ul>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-dark" href="https://github.com/AlexLeQc/SprintYourLife" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg><span data-i18n="syl.cta.code">Voir le dépôt sur GitHub</span></a>
+          </div>
+        </section>
+
+        <section class="live" id="live" aria-labelledby="live-title">
+          <div class="live-head">
+            <h2 id="live-title"><span class="dot" aria-hidden="true"></span><span data-i18n="syl.live.title">En direct du dépôt</span></h2>
+            <p data-i18n="syl.live.p">Le projet avance en ce moment. Ce panneau lit le dépôt GitHub public à chaque visite.</p>
+          </div>
+          <div class="live-grid">
+            <div class="live-col">
+              <h3 class="label" data-i18n="syl.live.ci">Dernière intégration continue sur main</h3>
+              <a class="live-ci" id="live-ci" href="https://github.com/AlexLeQc/SprintYourLife/actions" target="_blank" rel="noopener"><span class="ci-dot" aria-hidden="true"></span><span class="ci-text" data-i18n="syl.live.loading">Chargement…</span><span class="ci-when"></span></a>
+              <h3 class="label" data-i18n="syl.live.backlog">Avancement des specs</h3>
+              <ul class="spec-list"><li><a href="https://github.com/AlexLeQc/SprintYourLife/tree/main/specs" target="_blank" rel="noopener"><span data-i18n="syl.spec.001">001 Fondations</span><span class="pill pill-delivered" data-i18n="syl.st.delivered">Livrée</span></a></li><li><a href="https://github.com/AlexLeQc/SprintYourLife/tree/main/specs" target="_blank" rel="noopener"><span data-i18n="syl.spec.002">002 Tâches</span><span class="pill pill-delivered" data-i18n="syl.st.delivered">Livrée</span></a></li><li><a href="https://github.com/AlexLeQc/SprintYourLife/tree/main/specs" target="_blank" rel="noopener"><span data-i18n="syl.spec.003">003 Prêt pour le portfolio</span><span class="pill pill-uat" data-i18n="syl.st.uat">En UAT</span></a></li><li><a href="https://github.com/AlexLeQc/SprintYourLife/tree/main/specs" target="_blank" rel="noopener"><span data-i18n="syl.spec.004">004 Banque de quêtes secondaires</span><span class="pill pill-validated" data-i18n="syl.st.validated">Spec validée</span></a></li></ul>
+            </div>
+            <div class="live-col">
+              <h3 class="label" data-i18n="syl.live.prs">Dernières demandes de fusion</h3>
+              <ol class="pr-list" id="live-prs"><li class="pr-empty" data-i18n="syl.live.loading">Chargement…</li></ol>
+              <a class="live-more" href="https://github.com/AlexLeQc/SprintYourLife/pulls?q=is%3Apr+is%3Amerged" target="_blank" rel="noopener"><span data-i18n="syl.live.history">Voir tout l'historique</span><svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6m0-6L10 14M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+            </div>
+          </div>
+        </section>
+
+        <figure class="shot">
+          <img src="../assets/projects/sprintyourlife.webp" width="1600" height="884" alt="La page de connexion et la liste de tâches, en mode clair et sombre. Captures générées à partir de fausses données par la suite de tests." data-i18n-attr="alt:syl.shot1" />
+          <figcaption data-i18n="syl.shot1">La page de connexion et la liste de tâches, en mode clair et sombre. Captures générées à partir de fausses données par la suite de tests.</figcaption>
+        </figure>
+
+        <section class="section">
+          <h2 data-i18n="syl.problem.title">Le besoin</h2>
+          <p class="prose" data-i18n="syl.problem.p">Dans les moments creux, je prenais mon téléphone et je défilais par défaut. Mes idées de choses à apprendre existaient, éparpillées dans des notes, mais elles n'étaient pas devant moi au moment de choisir. Mes obligations, elles, fonctionnaient parce qu'elles avaient des échéances. L'application réunit donc les tâches et les quêtes secondaires au même endroit, et découpe les objectifs en sprints de deux semaines avec un critère mesurable.</p>
+        </section>
+
+        <section class="section">
+          <h2 data-i18n="syl.process.title">La démarche : la spec d'abord</h2>
+          <p class="prose" data-i18n="syl.process.p">La documentation est la source de vérité. Aucun code n'est écrit sans spec validée, et quand le code et la spec divergent, c'est la spec qui gagne, ou elle est modifiée volontairement dans une nouvelle version.</p>
+          <div class="roles roles-4"><div class="role-card"><span class="role-num">01</span><h3 data-i18n="syl.step.spec.t">Spec</h3><p data-i18n="syl.step.spec.d">Récits utilisateur, critères d'acceptation Given/When/Then, règles d'affaires numérotées, questions ouvertes et leurs réponses, liste d'UAT.</p></div><div class="role-card"><span class="role-num">02</span><h3 data-i18n="syl.step.plan.t">Plan et ADR</h3><p data-i18n="syl.step.plan.d">L'IA propose des options avec une recommandation; je décide. Chaque choix important devient un Architecture Decision Record.</p></div><div class="role-card"><span class="role-num">03</span><h3 data-i18n="syl.step.build.t">Tâches, code et tests</h3><p data-i18n="syl.step.build.d">Petites étapes avec un « terminé quand », des points de contrôle où le travail s'arrête pour moi, et un journal de preuves.</p></div><div class="role-card"><span class="role-num">04</span><h3 data-i18n="syl.step.uat.t">UAT</h3><p data-i18n="syl.step.uat.d">Je teste en production, sur mon vrai téléphone, avant de déclarer une spec livrée. Les frictions repartent dans le carnet.</p></div></div>
+        </section>
+
+        <section class="section">
+          <h2 data-i18n="syl.ai.title">Travailler avec l'IA agentive</h2>
+          <p class="prose" data-i18n="syl.ai.p1">La majeure partie du code est écrite par Claude Code. Mon travail, c'est l'analyse, les décisions et leurs raisons, les critères d'acceptation et la vérification de ce que l'IA produit.</p>
+          <ul class="checklist prose" data-i18n-html="syl.ai.list"><li><strong>Valider, pas seulement accepter.</strong> Un choix de bibliothèque d'authentification reposait sur une information dépassée. La décision n'a pas été effacée : un nouvel ADR (0011) la remplace et explique pourquoi.</li><li><strong>Des points de contrôle explicites</strong> où l'agent s'arrête et attend ma décision, au lieu de foncer sur une hypothèse.</li><li><strong>Des preuves pour chaque critère</strong> : l'agent consigne comment chaque critère d'acceptation a été vérifié, et je le revalide en UAT.</li><li><strong>Des garde-fous dans le dépôt</strong> : règles d'affaires isolées dans un module pur, imposé par une règle de lint; rien n'entre sur main sans CI verte.</li></ul>
+        </section>
+
+        <section class="section">
+          <h2 data-i18n="syl.trace.title">Une exigence, de la spec à la production</h2>
+          <p class="prose" data-i18n="syl.trace.p">La traçabilité est concrète : chaque règle a un identifiant qu'on retrouve jusque dans le nom des tests. Exemple avec BR-5, « une tâche est en retard quand sa date est passée ou, si elle a une heure, quand cette heure est passée ».</p>
+          <ol class="trace prose" data-i18n-html="syl.trace.list"><li><strong>Spec</strong> : la règle BR-5 et le critère AC-2.3 (une tâche en retard affiche « Was due… » en rouge).</li><li><strong>Code</strong> : une fonction <code>isOverdue()</code> dans le module de domaine, sans cadriciel ni base de données.</li><li><strong>Test unitaire</strong> « isOverdue (BR-5) » : les cas limites (minuit à Toronto, la minute exacte, aucune date).</li><li><strong>Test de bout en bout</strong> nommé d'après AC-2.1 à AC-2.6, dans un vrai navigateur sur une version de production.</li><li><strong>CI</strong> sur chaque demande de fusion, puis <strong>UAT</strong> sur le téléphone.</li></ol>
+          <div class="metrics"><div class="metric"><span class="metric-value">25+</span><span class="metric-label" data-i18n="syl.m1">demandes de fusion (PR) depuis le 16 novembre</span></div><div class="metric"><span class="metric-value">15</span><span class="metric-label" data-i18n="syl.m2">décisions d'architecture (ADR)</span></div><div class="metric"><span class="metric-value">83</span><span class="metric-label" data-i18n="syl.m3">tests unitaires des règles d'affaires</span></div><div class="metric"><span class="metric-value">43</span><span class="metric-label" data-i18n="syl.m4">tests de bout en bout, dont 20 d'accessibilité</span></div></div>
+        </section>
+
+        <section class="section learn">
+          <h2 data-i18n="syl.learn.title">Ce que j'en retiens</h2>
+          <p class="prose" data-i18n="syl.learn.p1">Une bonne spec est le meilleur levier qu'on a sur un agent de code : plus les critères d'acceptation sont précis, moins il y a d'allers-retours, et plus la vérification est simple.</p>
+          <p class="prose" data-i18n="syl.learn.p2">La suite : la spec 004, la banque de quêtes secondaires, est validée et prête à planifier. Le panneau ci-dessus suit son avancement.</p>
+          <div class="btn-row">
+            <a class="btn btn-dark" href="https://github.com/AlexLeQc/SprintYourLife" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg><span data-i18n="syl.cta.code">Voir le dépôt sur GitHub</span></a>
+            <a class="btn btn-outline" href="../index.html#projets"><svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M19 12H5m6 6-6-6 6-6"/></svg><span data-i18n="case.back">Retour aux projets</span></a>
+          </div>
+        </section>
+      </main>
+      <footer class="site-footer">
+        <p data-i18n="footer.text">© 2026 Alexis Guérard</p>
+        <div class="footer-links">
+          <a href="https://github.com/AlexLeQc" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg></a>
+          <a href="https://www.linkedin.com/in/alexis-guerard-089224212/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg></a>
+        </div>
+      </footer>
+    </div>
+    <div id="copy-toast" class="toast" role="status" aria-live="polite" data-i18n="toast.copied">Courriel copié!</div>
+    <script src="../js/i18n.js?v=490c8b41"></script>
+    <script src="../js/main.js?v=490c8b41"></script>
+    <script src="../js/live.js?v=490c8b41"></script>
+  </body>
+</html>
